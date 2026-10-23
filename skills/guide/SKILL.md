@@ -118,6 +118,7 @@ Agentic Brain skills currently cover:
 | `relay` | Transfer context and responsibility through explicit handoffs |
 | `document` | Create and maintain evidence-based documentation |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
+| `initialize` | Prepare Agentic Brain skills for a supported agent environment |
 
 This table describes skill responsibilities. It does not guarantee that every skill is installed or available in a particular runtime.
 

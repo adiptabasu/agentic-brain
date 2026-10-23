@@ -52,6 +52,7 @@ Compatibility must be validated and reported per environment. Listing an environ
 | `relay` | Prepare context-preserving handoffs between people and workflows |
 | `document` | Create and maintain evidence-based documentation |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
+| `initialize` | Prepare Agentic Brain's repository skills for a supported agent environment |
 
 This table lists the skills currently present in `skills/`. Their names and responsibilities may evolve as the framework is validated.
 
@@ -60,6 +61,10 @@ This table lists the skills currently present in `skills/`. Their names and resp
 ```text
 agentic-brain/
 ├── skills/       # Canonical skill definitions and supporting resources
+├── .agents/      # Codex-discoverable skill copies, generated from skills/
+├── .claude/      # Claude Code skill copies, generated from skills/
+├── .abacusai/    # Abacus AI Agent skill copies, generated from skills/
+├── scripts/      # Skill synchronization helpers
 ├── standards/    # Shared protocols and conventions
 ├── adapters/     # Environment-specific discovery and installation support
 ├── tests/
@@ -71,6 +76,30 @@ agentic-brain/
 
 The canonical skill source should be maintained in one place. Adapters should support environment-specific installation and discovery without silently changing a skill's meaning.
 
+## Agent setup and skill shortcuts
+
+Agentic Brain keeps canonical skills in `skills/`. `scripts/sync_skills.py` copies them into the selected agent's project discovery folder so they appear in that agent's skill picker.
+
+| Agent | Project skill folder | Explicit invocation |
+|---|---|---|
+| Codex | `.agents/skills/` | Type `$` to select a skill, or use `/skills` |
+| Claude Code | `.claude/skills/` | Type `/skill-name` |
+| Abacus AI Agent | `.abacusai/skills/` | Type `/skill-name`; `/skills` lists and manages skills |
+
+The `initialize` skill explains setup and troubleshooting for these adapters.
+
+To check or populate a host's copies, use its name with the sync helper:
+
+```sh
+python3 scripts/sync_skills.py --host codex --write
+python3 scripts/sync_skills.py --host claude --write
+python3 scripts/sync_skills.py --host abacus --write
+```
+
+Use `--host all` to populate all three. Without `--write`, the script only checks the copies. It reports differing files and does not overwrite them unless `--force` is supplied. It never deletes files. Start a new session after adding skills; Codex detects changes automatically, and can be restarted if updated skills do not appear.
+
+The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` are generated outputs. Make changes under `skills/`, then synchronize them.
+
 ## Core Standards
 
 - [Core Principles](standards/CORE-PRINCIPLES.md)
@@ -80,13 +109,19 @@ The canonical skill source should be maintained in one place. Adapters should su
 
 ## Project Status
 
-Early development. The repository contains shared standards and an initial set of 17 skills. Compatibility, installation, and behavior across target environments still require validation.
+Early development. The repository contains shared standards and 18 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 
 ## Contributing
 
 Contribution guidance, licensing, security reporting, and release procedures will be established before the project is considered ready for external contributions.
+
+## Host documentation
+
+- [Codex skills](https://learn.chatgpt.com/docs/build-skills)
+- [Claude Code skills](https://code.claude.com/docs/en/skills)
+- [Abacus AI Agent skills](https://abacus.ai/help/abacusai-desktop/agents-and-skills)
 
 ## License
 
