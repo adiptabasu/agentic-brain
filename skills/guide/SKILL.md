@@ -108,6 +108,7 @@ Agentic Brain skills currently cover:
 | `design` | Develop and evaluate solution architecture |
 | `plan` | Create ordered, actionable implementation plans |
 | `debug` | Investigate failures and identify evidence-supported causes |
+| `analyze-logs` | Analyze log timelines, performance symptoms, outages, and timezones |
 | `refine` | Improve existing work while preserving intended behavior |
 | `implement` | Execute approved implementation work within its authorized scope |
 | `review` | Evaluate work against requirements, correctness, and quality |
