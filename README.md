@@ -31,7 +31,7 @@ When uncertainty could materially affect the outcome, a skill must ask focused q
 
 Compatibility must be validated and reported per environment. Listing an environment as a target does not mean it has already been tested.
 
-## Initial Skills
+## Current Skills
 
 | Skill | Responsibility |
 |---|---|
@@ -42,13 +42,13 @@ Compatibility must be validated and reported per environment. Listing an environ
 | `design` | Evaluate architecture and consequential technical choices |
 | `plan` | Organize implementation into ordered, actionable tasks |
 | `debug` | Investigate failures and verify root-cause fixes |
-| `refine` | Improve code structure while preserving intended behavior |
+| `implement` | Execute approved implementation work and verify behavior |
 | `review` | Review correctness, maintainability, and regressions |
-| `shield` | Analyze security risks and mitigations |
-| `prove` | Verify outcomes against criteria and evidence |
-| `relay` | Prepare clear handoffs and preserve project context |
+| `verify` | Verify outcomes against criteria and evidence |
+| `document` | Create and maintain evidence-based documentation |
+| `release` | Prepare and assess releases with explicit readiness and authorization |
 
-These are the initial planned skills. Their names and responsibilities may be refined as the framework is validated.
+This table lists the skills currently present in `skills/`. Their names and responsibilities may evolve as the framework is validated.
 
 ## Repository Layout
 
@@ -75,7 +75,7 @@ The canonical skill source should be maintained in one place. Adapters should su
 
 ## Project Status
 
-Early development. The repository structure and shared standards are being established before the first pilot skills are implemented.
+Early development. The repository contains shared standards and an initial set of 12 skills. Compatibility, installation, and behavior across target environments still require validation.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 
