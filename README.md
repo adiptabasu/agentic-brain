@@ -42,9 +42,13 @@ Compatibility must be validated and reported per environment. Listing an environ
 | `design` | Evaluate architecture and consequential technical choices |
 | `plan` | Organize implementation into ordered, actionable tasks |
 | `debug` | Investigate failures and verify root-cause fixes |
+| `refine` | Improve software structure while preserving established behavior |
 | `implement` | Execute approved implementation work and verify behavior |
 | `review` | Review correctness, maintainability, and regressions |
+| `shield` | Assess security and safety risks and recommend mitigations |
 | `verify` | Verify outcomes against criteria and evidence |
+| `prove` | Assemble traceable evidence for claims and conclusions |
+| `relay` | Prepare context-preserving handoffs between people and workflows |
 | `document` | Create and maintain evidence-based documentation |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
 
@@ -75,7 +79,7 @@ The canonical skill source should be maintained in one place. Adapters should su
 
 ## Project Status
 
-Early development. The repository contains shared standards and an initial set of 12 skills. Compatibility, installation, and behavior across target environments still require validation.
+Early development. The repository contains shared standards and an initial set of 16 skills. Compatibility, installation, and behavior across target environments still require validation.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 

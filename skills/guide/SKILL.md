@@ -97,7 +97,7 @@ Do not treat silence as approval. Distinguish a proposal from an accepted decisi
 
 Select from skills that actually exist in the available project or runtime.
 
-Initial Agentic Brain skills are intended to include:
+Agentic Brain skills currently cover:
 
 | Skill | Primary responsibility |
 |---|---|
@@ -109,12 +109,16 @@ Initial Agentic Brain skills are intended to include:
 | `plan` | Create ordered, actionable implementation plans |
 | `debug` | Investigate failures and identify evidence-supported causes |
 | `refine` | Improve existing work while preserving intended behavior |
+| `implement` | Execute approved implementation work within its authorized scope |
 | `review` | Evaluate work against requirements, correctness, and quality |
 | `shield` | Assess security, safety, and trust boundaries |
-| `prove` | Verify outcomes and assemble supporting evidence |
+| `verify` | Check outcomes against criteria and report observable results |
+| `prove` | Assemble traceable evidence for claims and conclusions |
 | `relay` | Transfer context and responsibility through explicit handoffs |
+| `document` | Create and maintain evidence-based documentation |
+| `release` | Prepare and assess releases with explicit readiness and authorization |
 
-This table describes intended responsibilities, not proof that every skill is implemented or available.
+This table describes skill responsibilities. It does not guarantee that every skill is installed or available in a particular runtime.
 
 Before routing, check which skills are actually present and accessible. Never claim that an unavailable skill was invoked or that a proposed skill exists as a completed implementation.
 
