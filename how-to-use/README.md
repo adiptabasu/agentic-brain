@@ -16,6 +16,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Investigate and fix a bug](06-debug-a-failure.md)
 - [Refactor code without changing behavior](07-safe-refactor.md)
 - [Review a change for quality and security](08-review-and-security.md)
+- [Analyze logs for slowness or an outage](09-analyze-logs.md)
 - More guides will be added here individually.
 
 ## Invoking a skill
