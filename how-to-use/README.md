@@ -8,7 +8,8 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 
 ## Focused scenarios
 
-More guides will be added here individually.
+- [Choose where to start](01-choose-a-workflow.md)
+- More guides will be added here individually.
 
 ## Invoking a skill
 
