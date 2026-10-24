@@ -13,6 +13,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Start a proof of concept from scratch](03-start-a-poc.md)
 - [Create a feature in an existing codebase](04-create-a-feature.md)
 - [Clarify a request before deciding](05-clarify-a-request.md)
+- [Investigate and fix a bug](06-debug-a-failure.md)
 - More guides will be added here individually.
 
 ## Invoking a skill
