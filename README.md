@@ -88,6 +88,8 @@ Agentic Brain keeps canonical skills in `skills/`. `scripts/sync_skills.py` copi
 
 The `initialize` skill explains setup and troubleshooting for these adapters.
 
+For copy-ready prompts and task walkthroughs, start with the [How to use guides](how-to-use/README.md).
+
 To check or populate a host's copies, use its name with the sync helper:
 
 ```sh
