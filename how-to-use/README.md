@@ -21,6 +21,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Assess and prepare a release](11-prepare-a-release.md)
 - [Hand work to another person or agent](12-handoff-work.md)
 - [Set up Agentic Brain in an agent host](13-initialize-an-agent.md)
+- [Assemble evidence for an important claim](14-build-an-evidence-case.md)
 - More guides will be added here individually.
 
 ## Invoking a skill
