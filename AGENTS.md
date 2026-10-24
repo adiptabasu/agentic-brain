@@ -2,7 +2,7 @@
 
 This repository contains the canonical Agentic Brain skills under `skills/`.
 
-Repository-discoverable copies for Codex, Claude Code, and Abacus AI Agent live under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/`, respectively. They are generated from the canonical skills by `scripts/sync_skills.py`. Edit the canonical source, then synchronize the copies; do not maintain the host folders independently.
+When initialized, repository-discoverable copies for Codex, Claude Code, and Abacus AI Agent are generated under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/`, respectively, by `scripts/sync_skills.py`. These folders are absent from a fresh clone until generated. Edit the canonical source, then synchronize the copies; do not maintain the host folders independently.
 
 ## Skill use
 

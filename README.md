@@ -58,17 +58,16 @@ This table lists the skills currently present in `skills/`. Their names and resp
 
 ## Repository Layout
 
+The tracked repository currently contains:
+
 ```text
 agentic-brain/
-├── skills/       # Canonical skill definitions and supporting resources
-├── scripts/      # Skill synchronization helpers
-├── standards/    # Shared protocols and conventions
-├── adapters/     # Environment-specific discovery and installation support
-├── tests/
-│   ├── structure/
-│   ├── behavior/
-│   └── compatibility/
-└── docs/         # Architecture, usage, and contributor documentation
+├── AGENTS.md
+├── README.md
+├── how-to-use/   # Copy-ready prompts and task walkthroughs
+├── scripts/      # Skill synchronization helper
+├── skills/       # Canonical skill definitions
+└── standards/    # Shared protocols and conventions
 ```
 
 The canonical skill source should be maintained in one place. Adapters should support environment-specific installation and discovery without silently changing a skill's meaning.
@@ -99,7 +98,7 @@ python3 scripts/sync_skills.py --host abacus --write
 
 Use `--host all` to populate all three. Without `--write`, the script only checks the copies. It reports differing files and does not overwrite them unless `--force` is supplied. It never deletes files. Start a new session after adding skills; Codex detects changes automatically, and can be restarted if updated skills do not appear.
 
-The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` are local generated outputs, not tracked project files. Make changes under `skills/`, then synchronize the host copy you use. For moving application code into another codebase incrementally, see the [code migration guide](how-to-use/15-migrate-existing-checkout.md).
+The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` are local generated outputs, not tracked project files. Make changes under `skills/`, then synchronize the host copy you use. For moving application code into another codebase incrementally, see the [code migration guide](how-to-use/15-migrate-code-between-codebases.md).
 
 ## Core Standards
 
