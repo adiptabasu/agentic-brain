@@ -9,6 +9,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 ## Focused scenarios
 
 - [Choose where to start](01-choose-a-workflow.md)
+- [Point Agentic Brain at a codebase or repository](02-provide-a-codebase.md)
 - More guides will be added here individually.
 
 ## Invoking a skill
