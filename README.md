@@ -99,7 +99,7 @@ python3 scripts/sync_skills.py --host abacus --write
 
 Use `--host all` to populate all three. Without `--write`, the script only checks the copies. It reports differing files and does not overwrite them unless `--force` is supplied. It never deletes files. Start a new session after adding skills; Codex detects changes automatically, and can be restarted if updated skills do not appear.
 
-The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` are local generated outputs, not tracked project files. Make changes under `skills/`, then synchronize the host copy you use. See [the migration guide](how-to-use/15-migrate-existing-checkout.md) if you have an older checkout that already tracks these folders.
+The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` are local generated outputs, not tracked project files. Make changes under `skills/`, then synchronize the host copy you use. For moving application code into another codebase incrementally, see the [code migration guide](how-to-use/15-migrate-existing-checkout.md).
 
 ## Core Standards
 
