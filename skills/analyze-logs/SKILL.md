@@ -133,6 +133,18 @@ Separate observed events, derived measurements, interpretation, and hypotheses.
 
 A plausible cause is not a confirmed root cause. If identifying the cause requires code, infrastructure, metrics, traces, or external context beyond the logs, report the lead and recommend the appropriate follow-up.
 
+### 2.9 Prepare incident documents after the cause is agreed
+
+Do not write a definitive root cause analysis (RCA) or incident email while the cause is still disputed or only a hypothesis. Present the evidence and candidate explanation first, then ask the user to confirm the agreed cause and any impact, remediation, or timeline details that are not established by the logs. If the cause remains unverified, the user may request provisional documents, but label the cause and conclusions as provisional and state what evidence is missing.
+
+After the user agrees on the cause, create three separate plain-text (`.txt`) files:
+
+1. **Technical RCA:** a detailed account for a technical audience. Include incident summary, scope and impact supported by evidence, timezone-labeled timeline, agreed root cause and causal chain, contributing factors, detection, response and recovery, remediation, prevention or follow-up actions, and unresolved limitations. Mark information that was supplied by the user separately from what the logs establish.
+2. **Evidence-backed RCA:** a concise RCA whose factual claims are traceable to the supplied evidence. For each material log-based claim, cite the exact filename or relative path and line number (or line range), timestamp with its source timezone, and a short redacted excerpt or precise description. Explain what each cited line supports and what it does not prove. Do not invent line numbers; if the source cannot provide stable line references, say so and use the most precise available locator. A log line may support an event or sequence without proving causation.
+3. **Incident email:** a tight, precise email for the audience and purpose the user specifies. Include only the essential issue, impact, time window with timezone, agreed cause, current status, and next action when known. Avoid speculative detail and unnecessary technical narrative.
+
+Ask where to save the files if the user has not specified an output folder. Do not place them among the source logs by default. Use clear, distinct filenames, do not overwrite existing files without approval, and report the saved paths. Redact sensitive values in all three documents.
+
 ## 3. When to Use Analyze Logs
 
 Use Analyze Logs when:
@@ -286,6 +298,8 @@ Missing logs, uncertain clocks, unresolved timezone, unavailable baseline, and r
 
 For a short request, a concise summary may replace the full structure, but every reported event time must still include timezone context.
 
+When the user asks for incident documents, this analysis report is the working evidence record; the three requested `.txt` deliverables are created only after the cause and relevant incident details are agreed, following [Section 2.9](#29-prepare-incident-documents-after-the-cause-is-agreed).
+
 ## 7. Decision and Authorization Rules
 
 ### 7.1 Safe analysis
@@ -377,6 +391,7 @@ Analyze Logs is complete when:
 7. Observations, calculations, and hypotheses are distinguishable.
 8. Sensitive values are handled appropriately.
 9. Limitations and recommended next steps are clear.
+10. If incident documents were requested, the cause was agreed before definitive drafting, and the three separate text files were saved to the agreed destination. The evidence-backed RCA uses verifiable file and line references where available, and the email is concise.
 
 If timezone, coverage, or event evidence is too incomplete to support an absolute timeline, report the bounded result and unresolved information rather than claiming complete outage timing.
 
