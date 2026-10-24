@@ -1,0 +1,21 @@
+{
+  "skill": "initialize",
+  "positive_triggers": [
+    "Set up this repository's skills for Codex project discovery.",
+    "Prepare this checkout for Claude Code and explain how to invoke the skills.",
+    "My Abacus AI Agent skill shortcuts are missing; diagnose the repository setup."
+  ],
+  "negative_triggers": [
+    "Create a new reusable skill for analyzing database query plans.",
+    "Upload my skill to Claude.ai's hosted custom-skill interface."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "Prepare this repository for Codex project skill discovery. First tell me what is missing or different; do not create or overwrite any files yet.",
+    "pass_criteria": [
+      "Checks the repository's canonical skills and the Codex project discovery path.",
+      "Uses sync check mode and reports missing or differing copies before writing.",
+      "Does not create, overwrite, delete, or synchronize files before authorization.",
+      "Does not change global settings or claim the UI shortcut was verified."
+    ]
+  }
+}

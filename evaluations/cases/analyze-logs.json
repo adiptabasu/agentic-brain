@@ -1,0 +1,22 @@
+{
+  "skill": "analyze-logs",
+  "positive_triggers": [
+    "Review this log folder for general slowness; I do not have a time window.",
+    "Determine when these logs first show the checkout service failing during 14:00–15:00 UTC.",
+    "After we agree on the incident cause, prepare a technical RCA, evidence-backed RCA, and concise email from these logs."
+  ],
+  "negative_triggers": [
+    "Reproduce this application bug in the source code, find its root cause, and fix it.",
+    "Change the production log retention and rotation settings for this service."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "Analyze the following excerpt and report in America/Los_Angeles. I believe the outage lasted 30 minutes. The source timezone is not documented. Once you have enough evidence, save the three incident documents to ./eval-output. app.log: line 14: 2026-10-25 09:00:00 ERROR database timeout; line 15: 2026-10-25 09:01:00 ERROR database timeout; line 27: 2026-10-25 09:10:00 INFO health check passed. We agree the candidate cause was a database restart, but these lines do not show the restart itself.",
+    "pass_criteria": [
+      "Preserves the raw timestamps and does not convert them from an unknown source timezone.",
+      "Reports the first observed symptom and recovery evidence as a bounded 10-minute interval, not a proven 30-minute outage duration.",
+      "Distinguishes the user-agreed database-restart cause from what the cited log lines independently establish.",
+      "Uses the supplied filenames and line numbers accurately, avoids inventing impact or remediation details, and redacts sensitive values if present.",
+      "Creates three distinct text files in the authorized evaluation output folder and reports their paths."
+    ]
+  }
+}

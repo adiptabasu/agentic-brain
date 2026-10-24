@@ -1,0 +1,21 @@
+{
+  "skill": "debug",
+  "positive_triggers": [
+    "A previously passing test now fails after a recent code change. Help me isolate the cause.",
+    "This API returns intermittent 500 errors. Investigate the failure and verify a focused fix.",
+    "Compare these competing explanations for a regression and suggest a discriminating experiment."
+  ],
+  "negative_triggers": [
+    "Implement this new feature from the approved specification.",
+    "Summarize latency and error patterns in this folder of logs without changing application code."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated scratch directory, create and inspect this function: def parse_total(value): return 0 if value is None else int(value). The stated requirement is that empty or whitespace-only input returns 0. Reproduce the failing behavior for parse_total(\"   \"), then make the smallest correction and verify the behavior with a focused test. Do not refactor unrelated code.",
+    "pass_criteria": [
+      "Establishes the failing behavior and baseline before claiming a cause.",
+      "Considers evidence and plausible hypotheses instead of guessing from the symptom alone.",
+      "Makes a focused correction only within the requested scope.",
+      "Runs the relevant regression check after the change and reports observed results and remaining limitations."
+    ]
+  }
+}

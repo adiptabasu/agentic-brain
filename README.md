@@ -109,13 +109,13 @@ The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` a
 
 ## Project Status
 
-Early development. The repository contains shared standards and 18 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation.
+Early development. The repository contains shared standards and 18 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover five higher-impact skills; there is no automated evaluation runner or CI enforcement yet.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 
 ## Contributing
 
-Contribution guidance, security reporting, and release procedures will be established before the project is considered ready for external contributions.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose and review changes.
 
 ## Host documentation
 
