@@ -16,6 +16,7 @@ Make the repository's canonical skills available through the selected agent's do
 
 - Canonical skill sources live in `skills/<name>/SKILL.md`.
 - Implemented project adapters are Codex (`.agents/skills/`), Claude Code (`.claude/skills/`), and Abacus AI Agent (`.abacusai/skills/`), synchronized by `scripts/sync_skills.py`.
+- The generated host folders are intentionally not tracked in a fresh checkout. Initialization creates local copies only for the selected host after the user approves populating that folder.
 - Claude.ai custom skill uploads and other Claude surfaces are separate from Claude Code project skills. Do not treat a filesystem copy as an upload to those services.
 - Other agent hosts require a verified adapter and current official documentation before files or settings are added.
 - Do not change global agent configuration, install extensions, delete files, initialize Git, commit, or push as part of initialization unless separately authorized.
