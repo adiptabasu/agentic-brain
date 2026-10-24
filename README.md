@@ -115,7 +115,7 @@ No compatibility, installation, or behavioral claims should be made without corr
 
 ## Contributing
 
-Contribution guidance, licensing, security reporting, and release procedures will be established before the project is considered ready for external contributions.
+Contribution guidance, security reporting, and release procedures will be established before the project is considered ready for external contributions.
 
 ## Host documentation
 
@@ -125,4 +125,4 @@ Contribution guidance, licensing, security reporting, and release procedures wil
 
 ## License
 
-Not yet selected. Do not assume that this project is licensed for reuse until a license has been explicitly chosen and added to the repository.
+This project is licensed under the [MIT License](LICENSE).
