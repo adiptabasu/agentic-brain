@@ -12,6 +12,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Point Agentic Brain at a codebase or repository](02-provide-a-codebase.md)
 - [Start a proof of concept from scratch](03-start-a-poc.md)
 - [Create a feature in an existing codebase](04-create-a-feature.md)
+- [Clarify a request before deciding](05-clarify-a-request.md)
 - More guides will be added here individually.
 
 ## Invoking a skill
