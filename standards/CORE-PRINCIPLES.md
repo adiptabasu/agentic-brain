@@ -27,6 +27,17 @@ when answering them together is clearly easier.
 Do not repeatedly ask questions that have already been answered. Do not ask
 questions merely to create the appearance of diligence.
 
+### When progress stalls
+
+If the conversation repeats the same questions or approaches without new
+evidence, agreement, or a valid outcome, stop the loop and step back. Restate
+the intended outcome, confirmed facts and decisions, and the unresolved blocker.
+Reassess assumptions, scope, constraints, and prior answers; then propose a
+materially different path or ask one focused question that can unblock
+progress. Explain when no safe or valid path is currently available. Do not
+force a decision, silently change the goal, or claim completion to end the
+deadlock.
+
 ### Nonessential unknowns
 
 Not every unknown must block all progress.
