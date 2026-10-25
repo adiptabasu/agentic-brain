@@ -51,10 +51,12 @@ Compatibility must be validated and reported per environment. Listing an environ
 | `prove` | Assemble traceable evidence for claims and conclusions |
 | `relay` | Prepare context-preserving handoffs between people and workflows |
 | `document` | Create and maintain evidence-based documentation |
+| `create-document` | Plan and create standalone documents, including from supplied templates |
+| `writing` | Draft and edit natural, audience-aware prose grounded in evidence |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
 | `initialize` | Prepare Agentic Brain's repository skills for a supported agent environment |
 
-This table lists the skills currently present in `skills/`. Their names and responsibilities may evolve as the framework is validated.
+This table lists the skills currently present in `skills/`. Their names and responsibilities may evolve as the framework is validated. When adding or materially changing a skill, persona, or shared rule, update its evaluations, README catalogues, applicable how-to guides, and affected references; see AGENTS.md and how-to-use/18-add-a-skill-or-shared-rule.md.
 
 ## Repository Layout
 
@@ -109,7 +111,7 @@ The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` a
 
 ## Project Status
 
-Early development. The repository contains shared standards and 18 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover five higher-impact skills; there is no automated evaluation runner or CI enforcement yet.
+Early development. The repository contains shared standards and 20 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover seven higher-impact skills and repository integration; there is no automated evaluation runner or CI enforcement yet.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 

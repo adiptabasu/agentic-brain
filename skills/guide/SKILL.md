@@ -117,6 +117,8 @@ Agentic Brain skills currently cover:
 | `prove` | Assemble traceable evidence for claims and conclusions |
 | `relay` | Transfer context and responsibility through explicit handoffs |
 | `document` | Create and maintain evidence-based documentation |
+| `create-document` | Plan and create standalone documents, including from supplied templates |
+| `writing` | Draft and edit natural, audience-aware prose grounded in evidence |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
 | `initialize` | Prepare Agentic Brain skills for a supported agent environment |
 

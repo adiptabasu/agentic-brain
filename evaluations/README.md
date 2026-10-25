@@ -20,3 +20,6 @@ When a covered skill changes, update its case if the expected behavior or routin
 - [Initialize](cases/initialize.json)
 - [Shield](cases/shield.json)
 - [Release](cases/release.json)
+- [Create Document](cases/create-document.json)
+- [Writing](cases/writing.json)
+- [Repository integration](cases/repository-integration.json)

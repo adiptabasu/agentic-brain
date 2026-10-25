@@ -1,0 +1,22 @@
+{
+  "subject": "repository-integration",
+  "positive_triggers": [
+    "Add a new skill and keep the repository's evaluations, README files, and how-to guides in sync.",
+    "Change a shared rule and update every place that explains or evaluates it."
+  ],
+  "negative_triggers": [
+    "Make a typo correction that changes no documented behavior.",
+    "Run an existing skill for a user task without changing repository content."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated repository copy, add a user-facing skill called sample-writer. Follow repository instructions. Update the applicable evaluation, root README and skill catalogues, how-to index and a copy-ready how-to. Search for affected references, verify paths and evaluation data, and report any checks not performed. Do not commit.",
+    "pass_criteria": [
+      "Adds an appropriate evaluation case and links it from the evaluation index.",
+      "Updates the root README and every applicable skill catalogue.",
+      "Adds or updates a user-facing how-to and its index entry.",
+      "Searches for and updates affected documentation references and inventory counts.",
+      "Reports verification accurately and does not claim unperformed evaluations passed.",
+      "Does not commit without authorization."
+    ]
+  }
+}

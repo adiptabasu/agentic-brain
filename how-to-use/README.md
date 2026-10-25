@@ -23,6 +23,9 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Set up Agentic Brain in an agent host](13-initialize-an-agent.md)
 - [Assemble evidence for an important claim](14-build-an-evidence-case.md)
 - [Migrate code between codebases in small, verified chunks](15-migrate-code-between-codebases.md)
+- [Create a document from a brief or template](16-create-a-document.md)
+- [Write or edit prose](17-write-and-edit-prose.md)
+- [Add a skill or shared rule consistently](18-add-a-skill-or-shared-rule.md)
 
 ## Invoking a skill
 

@@ -1,0 +1,22 @@
+{
+  "skill": "writing",
+  "positive_triggers": [
+    "Rewrite this article clearly and naturally for experienced engineers without changing the facts.",
+    "Draft an accessible explanation for a general audience using the sources I provide.",
+    "Edit this email to be concise and consistent with my direct tone."
+  ],
+  "negative_triggers": [
+    "Create a formatted proposal using the attached template.",
+    "Document API behavior by inspecting this repository's implementation and tests."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "Rewrite this product explanation for a technically literate audience. Make it engaging and natural, preserving facts and caveats. The source contains no independent benchmark or customer stories.",
+    "pass_criteria": [
+      "Produces specific, audience-appropriate prose without generic filler or formulaic repetition.",
+      "Preserves the source's facts and caveats.",
+      "Does not invent benchmarks, customer stories, quotations, personal experience, or credentials.",
+      "Does not imply unsupported expertise, review, or endorsement.",
+      "Flags material evidence gaps instead of bluffing."
+    ]
+  }
+}
