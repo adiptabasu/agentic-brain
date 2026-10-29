@@ -1,6 +1,6 @@
 ---
 name: guide
-description: Understand the user's objective, clarify material uncertainty, recommend the appropriate Agentic Brain skill or workflow, and coordinate skill transitions when supported. Use when the user needs help choosing an approach, deciding what to do next, navigating Agentic Brain, or coordinating work across multiple skills.
+description: Route users to the smallest suitable Agentic Brain workflow when they need help choosing or coordinating skills.
 ---
 
 # Guide
@@ -97,32 +97,7 @@ Do not treat silence as approval. Distinguish a proposal from an accepted decisi
 
 Select from skills that actually exist in the available project or runtime.
 
-Agentic Brain skills currently cover:
-
-| Skill | Primary responsibility |
-|---|---|
-| `guide` | Navigate workflows and coordinate skill transitions |
-| `probe` | Clarify, challenge assumptions, and explore edge cases and trade-offs |
-| `test-first` | Drive development through tests and explicit acceptance behavior |
-| `specify` | Define requirements and acceptance criteria |
-| `design` | Develop and evaluate solution architecture |
-| `plan` | Create ordered, actionable implementation plans |
-| `debug` | Investigate failures and identify evidence-supported causes |
-| `analyze-logs` | Analyze log timelines, performance symptoms, outages, and timezones |
-| `refine` | Improve existing work while preserving intended behavior |
-| `implement` | Execute approved implementation work within its authorized scope |
-| `review` | Evaluate work against requirements, correctness, and quality |
-| `shield` | Assess security, safety, and trust boundaries |
-| `verify` | Check outcomes against criteria and report observable results |
-| `prove` | Assemble traceable evidence for claims and conclusions |
-| `relay` | Transfer context and responsibility through explicit handoffs |
-| `document` | Create and maintain evidence-based documentation |
-| `create-document` | Plan and create standalone documents, including from supplied templates |
-| `writing` | Draft and edit natural, audience-aware prose grounded in evidence |
-| `release` | Prepare and assess releases with explicit readiness and authorization |
-| `initialize` | Prepare Agentic Brain skills for a supported agent environment |
-
-This table describes skill responsibilities. It does not guarantee that every skill is installed or available in a particular runtime.
+Use the host’s available skill names and descriptions to route requests. If the runtime cannot enumerate them, inspect the repository catalogue or only the relevant candidate skill files. Do not read every skill file or list the full catalogue unless the user asks.
 
 Before routing, check which skills are actually present and accessible. Never claim that an unavailable skill was invoked or that a proposed skill exists as a completed implementation.
 
@@ -132,11 +107,7 @@ Prefer the smallest workflow that can meet the user's objective reliably.
 
 For a simple, well-defined task, recommend one skill or proceed directly if appropriate.
 
-For a task with meaningful dependencies, recommend an ordered sequence. For example:
-
-`probe → specify → design → plan → test-first → prove`
-
-This is illustrative, not a mandatory pipeline. Skip unnecessary stages, reorder them when justified, and revisit earlier work if new evidence changes the requirements.
+For work with meaningful dependencies, recommend only the stages required by the confirmed task. For example, clarify an ambiguous request before specifying it; do not prescribe a full pipeline in advance. Skip unnecessary stages and revisit earlier work only when new evidence changes the requirements.
 
 Use parallel work only when the tasks are genuinely independent and the runtime supports parallel execution.
 

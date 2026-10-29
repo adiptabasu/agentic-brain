@@ -1,6 +1,6 @@
 ---
 name: refine
-description: Improve the structure, clarity, and maintainability of existing software while preserving its established behavior and contracts. Use when a change should simplify or reorganize code without adding, removing, or redefining product behavior.
+description: Improve software structure and maintainability while preserving established behavior and contracts.
 ---
 
 # Refine

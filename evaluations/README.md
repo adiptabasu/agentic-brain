@@ -14,12 +14,14 @@ Use synthetic or redacted inputs. Behavioral cases may authorize file creation i
 When a covered skill changes, update its case if the expected behavior or routing has changed. Add cases for other skills when their risk or expected behavior makes manual evaluation useful. These cases are examples of important behaviors, not proof that a skill works in every host or situation.
 
 ## Current coverage
-
 - [Analyze Logs](cases/analyze-logs.json)
-- [Debug](cases/debug.json)
-- [Initialize](cases/initialize.json)
-- [Shield](cases/shield.json)
-- [Release](cases/release.json)
 - [Create Document](cases/create-document.json)
-- [Writing](cases/writing.json)
+- [Debug](cases/debug.json)
+- [Document](cases/document.json)
+- [Guide](cases/guide.json)
+- [Initialize](cases/initialize.json)
+- [Release](cases/release.json)
 - [Repository integration](cases/repository-integration.json)
+- [Shield](cases/shield.json)
+- [Verify](cases/verify.json)
+- [Writing](cases/writing.json)

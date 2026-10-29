@@ -1,6 +1,6 @@
 ---
 name: design
-description: Develop and evaluate technical designs and architectures from established requirements. Use when a solution needs component boundaries, interfaces, data flows, technology trade-offs, architecture decisions, reliability or security considerations, or a technical design handoff before implementation.
+description: Develop or evaluate technical architecture, component boundaries, interfaces, data flows, and trade-offs.
 ---
 
 # Design — Technical Design and Architecture

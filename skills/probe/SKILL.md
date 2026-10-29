@@ -1,6 +1,6 @@
 ---
 name: probe
-description: Investigate ambiguity, uncover material assumptions, clarify requirements, explore constraints and edge cases, and evaluate trade-offs before consequential decisions. Use when a request is underspecified, requirements conflict, important context is missing, or an agent needs to validate its understanding before proceeding.
+description: Clarify materially ambiguous goals, assumptions, constraints, and trade-offs before decisions.
 ---
 
 # Probe — Assumption Discovery and Clarification

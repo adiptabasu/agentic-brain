@@ -1,6 +1,6 @@
 ---
 name: prove
-description: Build a traceable case that connects important claims to requirements and relevant evidence, identifies gaps and limitations, and supports clear decisions or handoffs. Use when results need an organized, reviewable evidence package rather than an unsupported summary.
+description: Build a traceable evidence package supporting a claim, decision, or handoff.
 ---
 
 # Prove

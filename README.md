@@ -78,7 +78,7 @@ The host-specific folders (`.agents/`, `.claude/`, and `.abacusai/`) are intenti
 
 ## Agent setup and skill shortcuts
 
-Agentic Brain keeps canonical skills in `skills/`. `scripts/sync_skills.py` copies them into the selected agent's project discovery folder so they appear in that agent's skill picker.
+Agentic Brain keeps canonical skills in `skills/`. `scripts/sync_skills.py` copies each skill file and supporting resource into the selected agent's project discovery folder so they appear in that agent's skill picker.
 
 | Agent | Project skill folder | Explicit invocation |
 |---|---|---|
@@ -111,7 +111,7 @@ The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` a
 
 ## Project Status
 
-Early development. The repository contains shared standards and 20 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover seven higher-impact skills and repository integration; there is no automated evaluation runner or CI enforcement yet.
+Early development. The repository contains shared standards and 20 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover selected skills and repository workflows; there is no automated evaluation runner or CI enforcement yet.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 

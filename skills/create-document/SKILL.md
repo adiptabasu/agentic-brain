@@ -1,6 +1,6 @@
 ---
 name: create-document
-description: Plan and create standalone documents, including reports, proposals, guides, and materials based on user-provided templates. Use for document artifacts rather than software documentation.
+description: Create standalone documents from a brief or provided template, including reports, proposals, and guides.
 ---
 
 # Create Document

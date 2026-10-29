@@ -1,6 +1,6 @@
 ---
 name: document
-description: Create, update, and maintain accurate technical and operational documentation grounded in available evidence. Use for README files, setup guides, architecture descriptions, API references, runbooks, decision records, and documentation updates after implementation. Distinguish verified behavior from proposals and unknowns; do not invent implementation details or claim undocumented behavior is verified.
+description: Write or update software and operational documentation using evidence from implementation and project sources.
 ---
 
 # Document — Evidence-Based Documentation
@@ -511,131 +511,7 @@ Do not claim that files were changed, links were checked, commands were executed
 
 ## 6. Documentation Deliverable Structure
 
-Choose the deliverable structure based on the artifact type and audience.
-
-### 6.1 General document
-
-A useful default structure is:
-
-1. **Title** — Identifies the subject.
-2. **Purpose** — Explains why the document exists.
-3. **Scope** — Establishes what is and is not covered.
-4. **Context** — Provides necessary background.
-5. **Main content** — Explains the relevant concepts, instructions, or decisions.
-6. **Constraints and limitations** — Makes important boundaries explicit.
-7. **References** — Points to authoritative related material.
-8. **Next steps** — Identifies actions that remain, when relevant.
-
-Not every document needs all eight sections.
-
-### 6.2 README
-
-A README should quickly answer:
-
-- What is this project?
-- Who is it for?
-- What does it do?
-- What prerequisites are needed?
-- How can someone get started?
-- How is it used or configured?
-- How can it be tested or developed?
-- Where can readers find further information?
-- What license applies, if one has been confirmed?
-
-Prioritize the first successful user journey. Put detailed reference material in dedicated documents when that improves readability.
-
-Do not invent a license, project maturity level, compatibility guarantee, or feature claim.
-
-### 6.3 Architecture documentation
-
-Describe the system at the level needed to understand its structure and important trade-offs.
-
-Depending on the system, include:
-
-- System boundaries.
-- Components and responsibilities.
-- Interfaces and dependencies.
-- Data flows.
-- Trust boundaries and security considerations.
-- Failure modes.
-- Scaling or performance constraints when supported by evidence.
-- Approved decisions and rejected alternatives.
-- Known limitations and unresolved design questions.
-
-Distinguish actual architecture from intended or proposed architecture.
-
-### 6.4 API documentation
-
-Document only established interfaces.
-
-Include relevant information such as:
-
-- Operation or endpoint.
-- Supported method and parameters.
-- Request and response formats.
-- Authentication and authorization behavior.
-- Error responses.
-- Validation rules.
-- Examples.
-- Versioning and deprecation information.
-
-Prefer generated references or authoritative schemas where available.
-
-If implementation and specification disagree, report the discrepancy. Do not silently document one as if the conflict does not exist.
-
-### 6.5 Operational runbook
-
-Operational documentation must be especially careful about risk.
-
-Include:
-
-- Intended purpose.
-- Preconditions and required permissions.
-- Environmental assumptions.
-- Safe inspection steps.
-- Execution steps.
-- Expected observations.
-- Failure handling.
-- Escalation criteria.
-- Recovery or rollback instructions when established.
-- Explicit warnings about destructive or irreversible actions.
-
-Do not invent rollback commands or recommend production changes without an adequate basis and appropriate authorization.
-
-### 6.6 Decision record
-
-A decision record should make it possible for a future reader to understand both the choice and its context.
-
-Record:
-
-- Decision title and date, when known.
-- Status: proposed, accepted, rejected, superseded, or another clearly defined state.
-- Context and constraints.
-- Considered options.
-- Decision and rationale.
-- Consequences and trade-offs.
-- Related decisions.
-- Open questions or review triggers.
-
-Use only statuses supported by the actual decision process.
-
-### 6.7 Agent handoff document
-
-When the goal is to continue work across agents or sessions, preserve operationally relevant context.
-
-Include:
-
-- Goal and current scope.
-- Confirmed requirements.
-- Decisions and rationale.
-- Relevant artifacts and their locations.
-- Work completed and evidence collected.
-- Failures, limitations, and unresolved questions.
-- Dependencies and blockers.
-- Next recommended actions.
-- Required permissions or approvals.
-
-Separate observed state from proposed next steps. A handoff must not imply that a suggested action has already been performed.
+Use a simple structure suited to the request. Read references/document-deliverable-structures.md only for a specialized deliverable type.
 
 ## 7. Decision and Authorization Rules
 
@@ -729,104 +605,7 @@ Each statement must be supported by its own evidence.
 
 ## 8. Failure Handling
 
-### 8.1 Missing files or source access
-
-If a required file or source is unavailable:
-
-1. Identify what is missing.
-2. Search only the available, authorized sources.
-3. Complete independent documentation work where possible.
-4. Mark unsupported claims as unknown or omit them.
-5. Request the specific source or access needed.
-
-Do not fabricate file contents or pretend to have inspected unavailable artifacts.
-
-### 8.2 Contradictory documentation
-
-If two documents disagree:
-
-1. Identify the conflicting statements and locations.
-2. Determine whether one is explicitly designated as authoritative.
-3. Compare them with implementation or approved decisions when available.
-4. Update the appropriate source only when the correct interpretation is established.
-5. Link related documents where useful.
-6. Record unresolved conflicts as follow-up work.
-
-Do not resolve contradictions based solely on which wording sounds more plausible.
-
-### 8.3 Unsupported examples or commands
-
-If an example cannot be validated:
-
-- Look for an authoritative command reference, schema, or existing working example.
-- Correct it if sufficient evidence is available.
-- Label it as illustrative if it is not an actual observed result.
-- Omit it when presenting it would likely mislead the reader.
-- State the limitation if the example is essential to the requested documentation.
-
-Never invent successful output to make a guide appear complete.
-
-### 8.4 Broken links or missing references
-
-When a link fails or its destination is unavailable:
-
-- Confirm the intended destination if possible.
-- Correct it only when the replacement is established.
-- Remove or flag obsolete references when appropriate.
-- Avoid replacing an unavailable internal reference with an unrelated public page.
-- Report links that could not be checked.
-
-A failed network request alone does not prove that a destination no longer exists.
-
-### 8.5 Ambiguous audience or purpose
-
-If different interpretations would produce substantially different documents, ask a focused question.
-
-Otherwise, choose a reasonable, low-risk structure, make material scope boundaries clear, and proceed.
-
-Do not turn every stylistic preference into a blocking question.
-
-### 8.6 Scope expansion
-
-If the documentation review uncovers additional work:
-
-1. Separate required corrections from optional improvements.
-2. Complete authorized, relevant corrections.
-3. Record unrelated issues as recommendations.
-4. Ask before making consequential or out-of-scope changes.
-5. Keep the final summary clear about what was and was not changed.
-
-### 8.7 Formatting or validation failure
-
-If a document parser, linter, link checker, or other validator reports an issue:
-
-- Inspect the actual failure.
-- Determine whether it affects validity, readability, or factual correctness.
-- Fix issues within scope.
-- Rerun the relevant check when available.
-- Report unresolved failures honestly.
-
-If the validation tool is unavailable, do not claim validation succeeded.
-
-### 8.8 Sensitive information discovered during documentation
-
-If source material contains secrets or sensitive information:
-
-- Avoid copying the sensitive value into documentation.
-- Redact it from examples and excerpts.
-- Prefer placeholders or references to an approved secret-management mechanism.
-- Report material exposure through the appropriate channel.
-- Do not publish the sensitive value as part of a documentation fix.
-
-### 8.9 Interrupted work
-
-If documentation work is interrupted:
-
-- Preserve the last confirmed state.
-- Identify completed and incomplete sections.
-- Record unresolved source questions.
-- Avoid reporting a draft as complete if material sections remain unfinished.
-- Provide a concise handoff so work can resume safely.
+Do not invent missing information, preserve conflicts and limitations, and protect sensitive data. Read references/document-failure-handling.md only when a listed failure occurs.
 
 ## 9. Output Expectations
 
@@ -956,26 +735,8 @@ Do not claim that documentation is current merely because it was just edited.
 
 ## 11. Portability
 
-- Use plain Markdown and standard Agent Skills metadata unless the repository defines a different convention.
-- Adapt to the available documentation format, tooling, and repository structure.
-- Do not assume a particular language, framework, operating system, documentation generator, hosting provider, or CI platform.
-- Do not assume access to source code, project files, external links, or connected systems unless the runtime establishes their availability.
-- Use existing project conventions when supported by evidence.
-- Keep environment-specific instructions separate from generic concepts when both are needed.
-- Use explicit handoffs when source inspection, implementation, or external publication requires another capability.
-- Treat compatibility with individual agent platforms as unverified until tested.
+Use the repository’s document formats and available tools. For skill portability guidance, see references/document-maintenance.md only when maintaining this skill.
 
 ## 12. Maintenance
 
-When updating Document:
-
-1. Preserve alignment with the shared core principles and handoff contract.
-2. Keep documentation claims grounded in authoritative sources.
-3. Maintain a clear distinction between verified facts, intended behavior, proposals, and unknowns.
-4. Prefer updating canonical sources over creating unnecessary duplicates.
-5. Validate links, metadata, formatting, commands, and internal references when tools are available.
-6. Test procedural instructions when safe, authorized, and relevant.
-7. Reassess related documentation when interfaces, configuration, architecture, or operational procedures change.
-8. Remove stale content and duplicated rules when their authoritative source already defines them.
-9. Avoid including sensitive information in examples or operational instructions.
-10. Record meaningful changes through the repository's normal Git workflow.
+Skill-maintenance guidance is in references/document-maintenance.md and is not needed for routine documentation work.

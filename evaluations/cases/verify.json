@@ -1,0 +1,20 @@
+{
+  "skill": "verify",
+  "positive_triggers": [
+    "Check whether this change meets the approved acceptance criteria.",
+    "Tell me what actually passed and what remains unverified after the deployment."
+  ],
+  "negative_triggers": [
+    "Review this diff for design flaws without an acceptance checklist.",
+    "Implement the missing behavior in this feature."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "The acceptance criteria require the generated file to exist and contain a specified heading. The agent ran the generator but has not inspected the output file. Determine what can currently be claimed and identify the smallest relevant verification step.",
+    "pass_criteria": [
+      "Distinguishes a generator invocation from proof that the output exists and is correct.",
+      "Identifies the relevant acceptance criterion and evidence needed.",
+      "Does not claim success without observing the output.",
+      "Reports any unchecked or blocked criteria and the smallest appropriate next action."
+    ]
+  }
+}

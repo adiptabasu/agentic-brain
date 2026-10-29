@@ -1,6 +1,6 @@
 ---
 name: writing
-description: Draft, revise, and edit clear, natural, audience-aware prose across topics. Use when writing should be precise, readable, and grounded in available evidence.
+description: Draft and edit clear, audience-aware prose grounded in available evidence.
 ---
 
 # Writing

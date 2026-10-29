@@ -1,6 +1,6 @@
 ---
 name: relay
-description: Prepare, validate, and transfer concise context between people, agents, or workflow stages using explicit objectives, decisions, artifacts, blockers, evidence, and next actions. Use when work must continue across a handoff without losing intent or inventing approval.
+description: Transfer decisions, artifacts, blockers, and next steps between agents or workflow stages.
 ---
 
 # Relay

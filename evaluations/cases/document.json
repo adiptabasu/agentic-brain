@@ -1,0 +1,20 @@
+{
+  "skill": "document",
+  "positive_triggers": [
+    "Update the setup guide using commands verified in this repository.",
+    "Document this API behavior from its implementation and tests."
+  ],
+  "negative_triggers": [
+    "Write a general proposal from a supplied template.",
+    "Revise this paragraph for tone without checking implementation facts."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "Update the README setup instructions for this repository. The current README command conflicts with the package scripts; inspect the relevant files and document only what the repository supports.",
+    "pass_criteria": [
+      "Inspects authoritative project sources relevant to the setup instructions.",
+      "Resolves the command conflict using evidence or flags it as unresolved.",
+      "Does not invent behavior, commands, or compatibility claims.",
+      "Checks changed paths and links where possible and reports checks actually performed."
+    ]
+  }
+}

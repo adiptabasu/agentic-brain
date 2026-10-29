@@ -1,6 +1,6 @@
 ---
 name: initialize
-description: Prepare Agentic Brain skills for a supported AI agent and diagnose missing skill shortcuts. Use when onboarding this repository to an agent or when its skill commands do not appear.
+description: Set up canonical Agentic Brain skills for a supported agent host or troubleshoot discovery.
 ---
 
 # Initialize Agentic Brain for an agent
@@ -29,8 +29,8 @@ Make the repository's canonical skills available through the selected agent's do
    - Codex: `.agents/skills/`; use `$` or `/skills`.
    - Claude Code: `.claude/skills/`; use `/skill-name`.
    - Abacus AI Agent: `.abacusai/skills/`; use `/skill-name` or `/skills`.
-4. Run `python3 scripts/sync_skills.py --host <codex|claude|abacus>` in check mode. Report missing and differing copies before writing. Review differing files; do not use `--force` without agreement to replace them.
-5. After the user authorizes populating the selected discovery folder, run `python3 scripts/sync_skills.py --host <host> --write`. Recheck with the script in check mode. Use `--host all` only when the user wants all three copies populated.
+4. Run `python3 scripts/sync_skills.py --host <codex|claude|abacus>` in check mode. It checks each SKILL.md and supporting resource. Report missing and differing files before writing; do not use `--force` without agreement.
+5. After the user authorizes populating the selected discovery folder, run `python3 scripts/sync_skills.py --host <host> --write`. This copies missing skill files and resources without deleting files; recheck in check mode. Use `--host all` only when the user wants all three copies populated.
 6. Explain how to invoke the skills in the selected host. Do not claim that shortcuts are visible in the UI unless that was observed. Start a new session after adding skills; restart Codex if it does not show updated skills.
 7. For a host without an implemented adapter, report what its official documentation confirms and propose the smallest adapter change before modifying files.
 

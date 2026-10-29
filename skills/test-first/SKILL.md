@@ -1,6 +1,6 @@
 ---
 name: test-first
-description: Define and validate expected behavior before implementation using acceptance criteria, meaningful tests, failing baselines, and evidence-based verification. Use when developing features, fixing defects, changing existing behavior, or establishing a reliable test strategy before or alongside implementation.
+description: Define expected behavior and tests before or alongside implementation.
 ---
 
 # Test First

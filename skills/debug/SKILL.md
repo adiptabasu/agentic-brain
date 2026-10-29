@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Systematically investigate unexpected behavior, errors, and failures by reproducing symptoms, gathering evidence, testing competing hypotheses, isolating root causes, and verifying fixes. Use when software, workflows, tests, integrations, or systems behave differently from their established expectations.
+description: Reproduce unexpected software or system behavior, test causes, isolate defects, and verify focused fixes.
 ---
 
 # Debug

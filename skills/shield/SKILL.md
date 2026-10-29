@@ -1,6 +1,6 @@
 ---
 name: shield
-description: Assess security and safety risks in software, systems, workflows, and proposed changes; identify trust boundaries, plausible threats, existing controls, and proportionate mitigations. Use when security concerns could materially affect design, implementation, review, or operation.
+description: Assess security and safety risks, trust boundaries, threats, and proportionate mitigations.
 ---
 
 # Shield

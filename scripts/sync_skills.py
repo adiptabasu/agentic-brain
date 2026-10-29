@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronize canonical Agentic Brain skills to supported host folders."""
+"""Synchronize canonical Agentic Brain skill bundles to supported host folders."""
 
 import argparse
 import filecmp
@@ -25,7 +25,7 @@ def is_within_repo(path: Path, root: Path) -> bool:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Copy canonical skills to an agent host's discovery folder."
+        description="Copy canonical skill files and supporting resources to a host discovery folder."
     )
     parser.add_argument("--host", choices=(*HOSTS.keys(), "all"), required=True)
     parser.add_argument("--write", action="store_true", help="Copy missing skill files.")
@@ -50,30 +50,35 @@ def main() -> int:
 
     for host, relative_destination in selected_hosts.items():
         for skill in skills:
-            source = skill / "SKILL.md"
-            target = root / relative_destination / skill.name / "SKILL.md"
-            label = f"{host}:{skill.name}"
+            skill_files = sorted(path for path in skill.rglob("*") if path.is_file())
+            for source in skill_files:
+                relative_file = source.relative_to(skill)
+                target = root / relative_destination / skill.name / relative_file
+                label = f"{host}:{skill.name}/{relative_file.as_posix()}"
 
-            if not is_within_repo(source, root) or not is_within_repo(target, root):
-                print(f"refusing path outside repository: {label}")
-                return 2
+                if not is_within_repo(source, root) or not is_within_repo(target, root):
+                    print(f"refusing path outside repository: {label}")
+                    return 2
 
-            if not target.exists():
-                if args.write:
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(source, target)
-                    print(f"copied {label}")
-                else:
-                    print(f"missing {label}")
+                if target.exists() and target.is_dir():
+                    print(f"conflict {label} (destination is a directory)")
                     issues.append(label)
-            elif filecmp.cmp(source, target, shallow=False):
-                print(f"current {label}")
-            elif args.write and args.force:
-                shutil.copy2(source, target)
-                print(f"updated {label}")
-            else:
-                print(f"conflict {label} (review or use --write --force)")
-                issues.append(label)
+                elif not target.exists():
+                    if args.write:
+                        target.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(source, target)
+                        print(f"copied {label}")
+                    else:
+                        print(f"missing {label}")
+                        issues.append(label)
+                elif filecmp.cmp(source, target, shallow=False):
+                    print(f"current {label}")
+                elif args.write and args.force:
+                    shutil.copy2(source, target)
+                    print(f"updated {label}")
+                else:
+                    print(f"conflict {label} (review or use --write --force)")
+                    issues.append(label)
 
     if issues:
         return 1

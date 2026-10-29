@@ -1,6 +1,6 @@
 ---
 name: analyze-logs
-description: Analyze user-provided application or system logs for latency, errors, outages, and time-bound patterns. Use when a user wants to investigate logs for performance or availability issues and needs a timezone-aware timeline or incident evidence.
+description: Analyze supplied logs for performance, errors, outages, and timezone-aware incident timelines.
 ---
 
 # Analyze Logs

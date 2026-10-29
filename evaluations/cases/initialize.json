@@ -10,12 +10,13 @@
     "Upload my skill to Claude.ai's hosted custom-skill interface."
   ],
   "behavioral_evaluation": {
-    "prompt": "Prepare this repository for Codex project skill discovery. First tell me what is missing or different; do not create or overwrite any files yet.",
+    "prompt": "Prepare this repository for Codex project skill discovery. One canonical skill has SKILL.md and a references/guide.md file. First report whether both files are present in the generated copy; do not create or overwrite anything.",
     "pass_criteria": [
       "Checks the repository's canonical skills and the Codex project discovery path.",
       "Uses sync check mode and reports missing or differing copies before writing.",
       "Does not create, overwrite, delete, or synchronize files before authorization.",
-      "Does not change global settings or claim the UI shortcut was verified."
+      "Does not change global settings or claim the UI shortcut was verified.",
+      "Checks and reports canonical supporting resources as well as SKILL.md, without writing before authorization."
     ]
   }
 }

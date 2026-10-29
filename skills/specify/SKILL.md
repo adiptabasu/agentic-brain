@@ -1,6 +1,6 @@
 ---
 name: specify
-description: Transform clarified user intent into structured, traceable, testable requirements and specifications. Use when a problem needs explicit scope, functional or non-functional requirements, acceptance criteria, constraints, dependencies, or a specification that downstream design, planning, implementation, or testing workflows can consume.
+description: Turn clarified intent into structured, testable requirements and acceptance criteria.
 ---
 
 # Specify — Requirements and Specification Engineering

@@ -1,0 +1,20 @@
+{
+  "skill": "guide",
+  "positive_triggers": [
+    "I am unsure which Agentic Brain workflow to use for this request.",
+    "This task may need more than one skill; help me choose the smallest useful sequence."
+  ],
+  "negative_triggers": [
+    "The correct skill is already selected; complete its task.",
+    "List every skill in the repository."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "I want to add a small optional command-line flag to an existing tool, but I have not stated its behavior yet. Recommend the next step and only the workflow needed now.",
+    "pass_criteria": [
+      "Recognizes that expected behavior is not yet defined and recommends clarifying/specifying it before implementation.",
+      "Does not prescribe the full development pipeline when only the next step is needed.",
+      "Uses only skills that are actually available and does not load or list the whole catalogue unnecessarily.",
+      "Asks a focused question or gives a concise next action without re-asking established facts."
+    ]
+  }
+}

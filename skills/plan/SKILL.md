@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Turn established requirements and technical designs into actionable, dependency-aware execution plans. Use when work needs to be decomposed into tasks, sequenced, assigned, estimated, parallelized, or prepared for implementation with clear completion criteria, risks, and handoffs.
+description: Sequence established requirements and technical designs into actionable implementation tasks.
 ---
 
 # Plan

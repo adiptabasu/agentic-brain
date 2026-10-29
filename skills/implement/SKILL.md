@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Execute approved requirements, technical designs, and implementation plans by making focused, maintainable changes, respecting project conventions and authorization boundaries, and verifying the resulting behavior. Use when a task is ready for implementation and the expected outcome and scope are sufficiently established.
+description: Apply approved code or configuration changes when scope and expected behavior are clear.
 ---
 
 # Implement

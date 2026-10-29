@@ -1,6 +1,6 @@
 ---
 name: review
-description: Independently evaluate code, configuration, documentation, and other technical changes against requirements, correctness, maintainability, security, compatibility, and available verification evidence. Use when reviewing a proposed or completed change before acceptance, merge, release, or handoff.
+description: Independently inspect technical changes for correctness, regressions, maintainability, and security.
 ---
 
 # Review
