@@ -53,6 +53,7 @@ Compatibility must be validated and reported per environment. Listing an environ
 | `document` | Create and maintain evidence-based documentation |
 | `create-document` | Plan and create standalone documents, including from supplied templates |
 | `writing` | Draft and edit natural, audience-aware prose grounded in evidence |
+| `concise` | Use clear, concise responses when the user requests brevity |
 | `release` | Prepare and assess releases with explicit readiness and authorization |
 | `initialize` | Prepare Agentic Brain's repository skills for a supported agent environment |
 
@@ -111,7 +112,7 @@ The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` a
 
 ## Project Status
 
-Early development. The repository contains shared standards and 20 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover selected skills and repository workflows; there is no automated evaluation runner or CI enforcement yet.
+Early development. The repository contains shared standards and 21 canonical skills. Project skill folders and sync support are implemented for Codex, Claude Code, and Abacus AI Agent; UI behavior has not been validated in each host. Other compatibility targets still require validation. [Manual behavior evaluation cases](evaluations/README.md) cover selected skills and repository workflows; there is no automated evaluation runner or CI enforcement yet.
 
 No compatibility, installation, or behavioral claims should be made without corresponding validation evidence.
 
