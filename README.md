@@ -106,6 +106,7 @@ The copies under `.agents/skills/`, `.claude/skills/`, and `.abacusai/skills/` a
 ## Core Standards
 
 - [Core Principles](standards/CORE-PRINCIPLES.md)
+- [Cloud Platform Access Boundary](standards/CLOUD-PLATFORM-ACCESS.md)
 - [Handoff Contract](standards/HANDOFF-CONTRACT.md)
 - [Verification Standard](standards/VERIFICATION.md)
 - [Skill Authoring Template](standards/SKILL-TEMPLATE.md)

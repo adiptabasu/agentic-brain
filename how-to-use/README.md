@@ -27,6 +27,7 @@ These walkthroughs give you prompts you can copy, what to expect, and how to mov
 - [Write or edit prose](17-write-and-edit-prose.md)
 - [Add a skill or shared rule consistently](18-add-a-skill-or-shared-rule.md)
 - [Use concise response style](19-use-concise-style.md)
+- [Inspect cloud resources safely](20-inspect-cloud-resources-safely.md)
 
 ## Invoking a skill
 

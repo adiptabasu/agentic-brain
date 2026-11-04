@@ -15,6 +15,7 @@ When a covered skill changes, update its case if the expected behavior or routin
 
 ## Current coverage
 - [Analyze Logs](cases/analyze-logs.json)
+- [Cloud platform access boundary](cases/cloud-platform-access.json)
 - [Create Document](cases/create-document.json)
 - [Concise](cases/concise.json)
 - [Debug](cases/debug.json)
