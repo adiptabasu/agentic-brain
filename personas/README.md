@@ -19,4 +19,6 @@ Adopt a persona when its perspective helps. Combine personas only when a task sp
 
 SRE and DevOps often collaborate but have distinct emphases: SRE centers service reliability and operations; DevOps centers the systems that build, deliver, and operate software. Neither persona grants permission to change production or cloud resources.
 
+For a repeatable detailed-document workflow, use the [write-document skill](../skills/write-document/SKILL.md) with the Technical Writer and Knowledge Curator persona. Add only relevant subject-matter personas when technical accuracy benefits from their viewpoint.
+
 For examples, see [Choose and combine personas](../how-to-use/02-personas.md). Profile structure is defined in the [Persona Template](../standards/PERSONA-TEMPLATE.md).

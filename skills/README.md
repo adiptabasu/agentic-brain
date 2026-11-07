@@ -5,6 +5,7 @@ This directory is the single editable source for Agentic Brain skills. Each skil
 ## Current skills
 
 - [initialize](initialize/SKILL.md) — check or prepare a selected agent host's project-level skill discovery folder.
+- [write-document](write-document/SKILL.md) — draft or revise detailed software and operational documents, and compose clear commit messages from reviewed changes.
 
 Host-specific copies are generated in the directories listed under `adapters/` (currently Codex, Claude Code, Abacus AI Agent, and Cursor). The initialize workflow can add another host after verifying its current official project-skill documentation. Do not edit generated copies directly. After editing a canonical skill, synchronize it with `scripts/sync_skills.py` and recheck the result.
 

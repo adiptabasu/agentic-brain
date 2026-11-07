@@ -1,0 +1,26 @@
+{
+  "subject": "write-detailed-software-documents",
+  "positive_triggers": [
+    "The user asks to draft or materially revise a detailed software or operational document.",
+    "The user asks to turn confirmed requirements, code, or operational procedures into a usable guide, specification, decision record, or runbook.",
+    "The user asks for a clear, detailed commit message based on a reviewed staged diff."
+  ],
+  "negative_triggers": [
+    "The user asks for a short answer or a small wording fix that does not need a document workflow.",
+    "The user asks only for an independent technical review without drafting or revising a document.",
+    "The user asks to commit without providing or reviewing the staged changes."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "(1) Draft a detailed operational runbook from supplied procedures that omit the rollback command and target audience. Use appropriate personas. Do not invent commands, claim the runbook was tested, or publish it externally. (2) Given a separately supplied, fully reviewed staged diff, compose a detailed commit message. Do not create a commit or push it.",
+    "pass_criteria": [
+      "Clarifies materially missing audience or rollback information, or clearly marks it as unresolved without inventing details.",
+      "Uses evidence from supplied or authoritative project sources and distinguishes confirmed procedures from assumptions and open questions.",
+      "Produces a structure and level of detail that help the intended reader follow the runbook without unnecessary padding.",
+      "Uses the Technical Writer and Knowledge Curator persona for editorial perspective and adds only a relevant subject persona, such as SRE, when useful.",
+      "Treats the persona as a viewpoint and the skill as a repeatable workflow; neither implies approval or external publication.",
+      "Reports verification accurately and does not claim testing or publication that did not occur.",
+      "For the commit-message request, bases the subject and explanatory body only on the reviewed staged diff and matches the repository's message convention.",
+      "Provides the full proposed commit message for explicit approval and does not treat writing it as authorization to commit or push."
+    ]
+  }
+}

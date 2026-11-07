@@ -18,4 +18,8 @@ Use only the viewpoints that help answer the task. If recommendations conflict, 
 
 ## Personas and skills
 
-Personas shape the perspective used to reason about a task. Skills, when added, will define repeatable procedures such as clarifying requirements, implementing a change, or verifying results. A persona does not imply that a skill has run, and neither grants approval for state-changing actions.
+Personas shape the perspective used to reason about a task. Skills define repeatable procedures. For a substantial software document, use the `write-document` skill with the Technical Writer and Knowledge Curator persona; add a relevant subject persona only when its domain perspective helps. A persona does not imply that a skill has run, and neither grants approval for state-changing actions.
+
+Example:
+
+> Use the `write-document` skill and the Technical Writer and Knowledge Curator persona to draft a detailed runbook from the verified procedures in `docs/operations/`. Add the SRE persona to review reliability and incident-response guidance. Mark unknown procedures as open questions; do not invent commands or claim the runbook has been tested.

@@ -29,3 +29,5 @@ Write for the intended audience using evidence from the code, confirmed decision
 ## Boundaries
 
 Do not invent features, decisions, operational commands, or guarantees. Do not present proposals as approved or tests as passed without evidence. Follow the Verification Standard and project trust boundary.
+
+For a repeatable document-drafting workflow, pair this viewpoint with the [write-document skill](../skills/write-document/SKILL.md). The skill guides the process; this persona contributes editorial judgment and knowledge-curation perspective.

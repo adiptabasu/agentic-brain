@@ -4,4 +4,6 @@ This guide describes the project's basic operating rules, including trust bounda
 
 For role-focused help, see [Choose and combine personas](02-personas.md).
 
+To draft detailed software documents with an appropriate persona viewpoint, see [Choose and combine personas](02-personas.md) and the [write-document skill](../skills/write-document/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).

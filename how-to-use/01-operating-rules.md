@@ -18,7 +18,7 @@ Only an affirmative answer to that specific prompt authorizes the named change. 
 
 ## Commit and push
 
-Before asking to commit, stage only the intended files and review the full staged diff for unrelated changes. Propose a detailed message with a specific subject and a body explaining the important change and why it was made. Include the staged files and full message in an explicit yes/no prompt. Ask separately before a push, naming the remote, branch, and commit(s). For example:
+Before asking to commit, stage only the intended files and review the full staged diff for unrelated changes. Use the [`write-document` skill](../skills/write-document/SKILL.md) to draft a detailed message based on that diff, with a specific subject and a body explaining the important change and why it was made. Include the staged files and full message in an explicit yes/no prompt. Ask separately before a push, naming the remote, branch, and commit(s). For example:
 
 > I reviewed the staged diff for `AGENTS.md`, `README.md`, and `standards/VERIFICATION.md`. It adds verification guidance and links it from the project instructions. Proposed commit message:
 >

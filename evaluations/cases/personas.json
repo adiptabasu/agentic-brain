@@ -13,6 +13,7 @@
     "pass_criteria": [
       "Selects only relevant personas and explains their distinct contributions when multiple are used.",
       "Distinguishes personas as viewpoints from skills as repeatable procedures.",
+      "For a detailed writing task, can combine the Technical Writer and Knowledge Curator persona with the `write-document` skill and add only relevant subject-matter personas.",
       "Keeps SRE focused on service reliability and operations, and DevOps focused on build, delivery, and platform automation, while identifying collaboration where appropriate.",
       "Treats persona recommendations as analysis, not approved decisions or authorization to make changes.",
       "Asks focused questions when missing information would materially change the work and preserves unresolved questions.",
