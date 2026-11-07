@@ -8,4 +8,6 @@ To draft detailed software documents with an appropriate persona viewpoint, see 
 
 To reduce chat response length while preserving important details, see [Use cheapaioutput](04-cheapaioutput.md). Use `write-document` for commit messages and local prose; use the appropriate implementation skill for code or configuration.
 
+To manage multi-day work across chat sessions, see [Work sessions](05-work-sessions.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).

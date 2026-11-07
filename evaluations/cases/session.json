@@ -1,0 +1,23 @@
+{
+  "subject": "multi-chat-work-session-lifecycle",
+  "positive_triggers": [
+    "The user asks to start or resume development work likely to span multiple chats or days.",
+    "The user asks to pause, complete, or terminate a work session."
+  ],
+  "negative_triggers": [
+    "The user asks for a short, single-chat task that needs no persistent handoff."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated repository copy, start a multi-day feature session, pause and resume it in a later chat, then complete and terminate it. Also try to terminate an active session and a paused session. Do not delete files without explicit approval.",
+    "pass_criteria": [
+      "Creates dated scratch folders only under the ignored sessions/work/ path and keeps temporary artifacts there.",
+      "Maintains one rolling tracked handoff per workstream and reads only the relevant handoff when resuming.",
+      "Resumes an existing closed scratch folder in place, or seeds a fresh dated folder from the handoff after prior scratch termination.",
+      "On pause, records decisions, progress, changed files, checks, blockers, and next actions; paused cleanup preserves the handoff.",
+      "On completion, updates only relevant source-of-truth project files and does not alter README merely to log the session.",
+      "Refuses to terminate active work and asks explicit yes/no approval naming exact deletion targets before cleanup.",
+      "Completed cleanup removes only its scratch folder, obsolete handoff, and index row after durable project updates; preserves project records and other workstreams.",
+      "Does not retain full chat transcripts or report this manual evaluation passed unless it was run and reviewed."
+    ]
+  }
+}

@@ -31,6 +31,8 @@ Copy this prompt into your AI coding agent and replace `<AI HOST>` with the exac
 
 Canonical skill sources live in [`skills/`](skills/README.md). The [`initialize` skill](skills/initialize/SKILL.md) checks or prepares host-specific discovery folders using documented adapters. Current adapters support Codex, Claude Code, Abacus AI Agent, and Cursor. The [`write-document` skill](skills/write-document/SKILL.md) drafts or revises local software and operational documents and composes commit messages from reviewed changes, with relevant persona viewpoints when useful. The [`cheapaioutput` skill](skills/cheapaioutput/SKILL.md) shapes concise chat replies only. Use `write-document` or the appropriate implementation skill for local file content. Use canonical sources as the only editable copy and regenerate host copies when they change.
 
+Use the [`session` skill](skills/session/SKILL.md) to manage dated scratch folders and resumable handoffs for multi-day work.
+
 ## Personas
 
 Personas provide focused viewpoints for software development work; they do not grant permissions or replace repeatable skills. The initial profiles cover requirements analysis, software architecture, security architecture, implementation, independent review and test strategy, technical writing and knowledge curation, SRE, and DevOps. See the [persona catalogue](personas/README.md).
