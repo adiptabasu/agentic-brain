@@ -14,4 +14,6 @@ To create persona-informed plans that stay in session scratch until termination,
 
 To define and review eval scenarios before implementation, see the [define-testcases skill](../skills/define-testcases/SKILL.md).
 
+To implement a reviewed plan and iterate until its evals and unit tests pass, see the [develop-to-green skill](../skills/develop-to-green/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).
