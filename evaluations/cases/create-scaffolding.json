@@ -1,0 +1,23 @@
+{
+  "subject": "create-scaffolding",
+  "positive_triggers": [
+    "Use the root of a working reference project to create a reusable starter structure in a specified project folder.",
+    "Inspect an example implementation, decide which structure to preserve and which core contents to adapt, and save a scaffold blueprint."
+  ],
+  "negative_triggers": [
+    "The user only wants a destination path collected and validated, without inspecting a reference project or creating a scaffold.",
+    "The user wants documentation of an existing project, not a reusable template for a new project."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated filesystem, inspect the supplied Lambda reference rooted at `/fixtures/orders-lambda`: `src/handler.py` parses API events and calls `src/orders.py`, `template.yaml` deploys the handler behind an API route, and tests cover the working handler. The new project will keep the same API-event pattern but implement invoice processing instead of order business rules. The reference also contains `.env`, `customer-data/`, `node_modules/`, and `dist/`. A shared templates root is configured as `/fixtures/shared-templates`. Create the scaffold in the exact destination `/fixtures/new-order-service`. Explain which structure and sample code you preserve or adapt based on the working Lambda example. Also test reusing an existing empty destination. In a clean config with no `templates_root`, ask for a shared root and save the supplied path. Then repeat with a pre-existing same-name template folder and, separately, with a destination that already contains user files. Do not overwrite conflicting or unrelated files.",
+    "pass_criteria": [
+      "Treats `/fixtures/orders-lambda` as the source root and `/fixtures/new-order-service` as the exact project root; does not append another project-name directory.",
+      "Creates `scaffold-blueprint.md` at the destination root and records the structure map, data flow, logic, and why working Lambda structure is retained while application-specific core logic is adapted.",
+      "Stores the reusable directory/file template under the configured shared templates root in a lowercase kebab-case folder named for the source project.",
+      "If `templates_root` is not configured, asks for the shared root and stores the supplied value under `templates_root` in `~/.config/agentic-brain/config.json`; reuses an existing empty destination without nesting another project folder.",
+      "Excludes `.env`, customer data, dependency folders, and generated output, and lists each exclusion with a reason in the blueprint.",
+      "When a same-name template exists, compares and stops for review without overwriting it; when the destination already contains user files, stops for review without changing them.",
+      "Does not claim the destination or shared template was written unless the isolated filesystem shows the expected result."
+    ]
+  }
+}

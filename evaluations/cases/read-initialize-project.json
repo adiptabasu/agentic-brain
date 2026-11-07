@@ -1,0 +1,22 @@
+{
+  "subject": "read-initialize-project",
+  "positive_triggers": [
+    "Inspect an existing repository and create or refresh a project context guide for future sessions.",
+    "Update project documentation while preserving manual notes and linking it from AGENTS.md."
+  ],
+  "negative_triggers": [
+    "The user asks to create a reusable starter template from a separate reference project.",
+    "The user only needs a project destination path collected and validated."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated copy of a repository, inspect its README, `src/cli.py`, `src/auth.py`, `tests/`, configuration example, and development scripts. The README describes a command-line payment tool; `cli.py` calls `auth.py` before invoking a payment service; the config example has `PAYMENT_API_URL` and a redacted `PAYMENT_API_TOKEN`; `make dev` starts development and `python -m pytest` runs tests. Create `project-context.md` at the root and add a pointer in the existing `AGENTS.md`. Distinguish facts observed in files from reasonable inferences, and name configuration keys without copying secret values. On a second run, refresh the generated content after a source change while preserving the manual notes in `project-context.md`. Then test a conflict where a manual note contradicts the current repository evidence; stop and request review rather than silently replacing it.",
+    "pass_criteria": [
+      "Writes or refreshes the root-level `project-context.md` with the project's purpose, major components, entry points, data flow, integrations, configuration names without secret values, and development/test commands.",
+      "Links relevant files and clearly distinguishes observed facts from inferences.",
+      "Adds a pointer to the context guide in the existing `AGENTS.md`.",
+      "Refreshes marked generated sections while preserving manual notes on a later run.",
+      "Stops for review when generated facts conflict with manual notes; does not silently overwrite the disputed content.",
+      "Does not copy secret values into the guide or create a reusable scaffold template."
+    ]
+  }
+}

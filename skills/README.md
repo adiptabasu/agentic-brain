@@ -13,6 +13,7 @@ Load only the skill selected for the task and the references it needs; this cata
 - [plan](plan/SKILL.md) — create persona-informed session plans and consolidate them into one session-local `PLAN.md` with `plan finish`.
 - [define-testcases](define-testcases/SKILL.md) — map a completed plan to manual eval scenarios and applicable executable tests before implementation.
 - [develop-to-green](develop-to-green/SKILL.md) — implement an approved plan and iterate until its evals and applicable unit tests pass.
+- [create-scaffolding](create-scaffolding/SKILL.md) — create an evidence-based project scaffold and reusable template from a reference project.
 
 Host-specific copies are generated in the directories listed under `adapters/` (currently Codex, Claude Code, Abacus AI Agent, and Cursor). The initialize workflow can add another host after verifying its current official project-skill documentation. Do not edit generated copies directly. After editing a canonical skill, synchronize it with `scripts/sync_skills.py` and recheck the result.
 

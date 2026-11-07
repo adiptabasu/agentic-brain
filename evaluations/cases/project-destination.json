@@ -1,0 +1,22 @@
+{
+  "subject": "project-destination",
+  "positive_triggers": [
+    "The user is starting a project and needs to provide the exact project-folder path before scaffolding.",
+    "Validate a supplied destination path and pass it unchanged to the scaffolding workflow."
+  ],
+  "negative_triggers": [
+    "The user asks to inspect an existing reference project's structure and create a scaffold.",
+    "The user asks to document the structure of an existing project."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated filesystem, the user says: `Create my project in /fixtures/work/Payments Portal`. The parent `/fixtures/work` exists and is writable, and the destination does not exist. Ask for or confirm the exact path as needed. Then evaluate a second input where the supplied path is an existing regular file and a third where it is an existing directory containing user files. Do not create or rename folders in this skill.",
+    "pass_criteria": [
+      "Preserves the exact user-supplied path, including spaces, and does not append a project-name folder.",
+      "Validates that the path can be used as a project folder and asks for a corrected path when the supplied location is an existing regular file.",
+      "Does not create the project folder or generate scaffold files; leaves those actions to `create-scaffolding`.",
+      "Passes the validated exact path to the scaffolding workflow without changing it.",
+      "For an existing non-empty directory, passes the exact path to `create-scaffolding` so that skill can stop for review; does not alter or clear the contents.",
+      "Does not inspect or generate a reusable scaffold from a reference project."
+    ]
+  }
+}

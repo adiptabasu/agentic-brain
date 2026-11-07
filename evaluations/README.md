@@ -12,5 +12,8 @@ These cases are prompts and pass criteria for reviewers. They are not automated 
 - [Session planning and plan finish](cases/plan.json)
 - [Define and review phase eval scenarios](cases/define-testcases.json)
 - [Implement iteratively until evals and unit tests pass](cases/develop-to-green.json)
+- [Create scaffolding from a reference project](cases/create-scaffolding.json)
+- [Collect and validate the project destination](cases/project-destination.json)
+- [Read and initialize project context](cases/read-initialize-project.json)
 - [Persona selection and boundaries](cases/personas.json)
 - [Trust boundaries, local approvals, and verification](cases/trust-and-verification.json)
