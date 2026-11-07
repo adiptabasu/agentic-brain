@@ -4,6 +4,29 @@ A clean rebuild of Agentic Brain. Product scope, architecture, and project workf
 
 The previous project version is preserved separately for reference.
 
+## Get the project
+
+Clone the repository with Git:
+
+```sh
+git clone https://github.com/adiptabasu/agentic-brain.git
+cd agentic-brain
+```
+
+Or download and extract the latest `main` branch ZIP (without Git history):
+
+```sh
+curl -L https://github.com/adiptabasu/agentic-brain/archive/refs/heads/main.zip -o agentic-brain.zip
+unzip agentic-brain.zip
+cd agentic-brain-main
+```
+
+## Initialize for an AI host
+
+Copy this prompt into your AI coding agent and replace `<AI HOST>` with the exact product, such as `Codex`, `Claude Code`, `Abacus AI Agent`, or `Cursor`:
+
+> Read `skills/initialize/SKILL.md` and follow it. Initialize this project for `<AI HOST>`. Check the canonical `skills/` tree, report missing or differing copies, and copy only missing files for the selected host. If the host is not listed in `adapters/`, research its current official documentation and follow the initialize skill's process for adding support. Preserve conflicts and unrelated files, recheck afterward, and report whether skill discovery was verified in the host UI. Do not initialize other hosts.
+
 ## Skills
 
 Canonical skill sources live in [`skills/`](skills/README.md). The [`initialize` skill](skills/initialize/SKILL.md) checks or prepares host-specific discovery folders using documented adapters. Current adapters support Codex, Claude Code, Abacus AI Agent, and Cursor. Use canonical sources as the only editable copy and regenerate host copies when they change.
