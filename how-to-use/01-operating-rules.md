@@ -18,15 +18,24 @@ Only an affirmative answer to that specific prompt authorizes the named change. 
 
 ## Commit and push
 
-Ask separately before a commit and before a push. State exactly which changes or commit, remote, and branch are involved. For example:
+Before asking to commit, stage only the intended files and review the full staged diff for unrelated changes. Propose a detailed message with a specific subject and a body explaining the important change and why it was made. Include the staged files and full message in an explicit yes/no prompt. Ask separately before a push, naming the remote, branch, and commit(s). For example:
 
-> Commit the current README and rules changes on `main` with message “docs: define operating rules”? Please answer yes or no.
+> I reviewed the staged diff for `AGENTS.md`, `README.md`, and `standards/VERIFICATION.md`. It adds verification guidance and links it from the project instructions. Proposed commit message:
+>
+> ```text
+> docs(rules): add evidence-based verification guidance
+>
+> Define when to report checks as passed and require evidence for outcome
+> claims. Link the verification standard from the project instructions.
+> ```
+>
+> Create this commit on `main`? Please answer yes or no.
 
 After the commit, ask again before sending it to a remote:
 
 > Push commit `abc1234` from `main` to `origin/main`? Please answer yes or no.
 
-A request to make a change does not itself replace the required yes/no approval prompt for the later commit or push.
+A request to make a change does not itself replace the required yes/no approval prompt for the later commit or push. If the staged diff changes after approval, review it again and ask for approval again.
 
 ## Destructive local changes
 
