@@ -10,5 +10,6 @@ These cases are prompts and pass criteria for reviewers. They are not automated 
 - [Cheap AI output mode](cases/cheapaioutput.json)
 - [Multi-chat work sessions](cases/session.json)
 - [Session planning and plan finish](cases/plan.json)
+- [Define and review phase eval scenarios](cases/define-testcases.json)
 - [Persona selection and boundaries](cases/personas.json)
 - [Trust boundaries, local approvals, and verification](cases/trust-and-verification.json)

@@ -1,0 +1,24 @@
+{
+  "subject": "define-testcases",
+  "positive_triggers": [
+    "The plan for a development phase is complete; define and review its eval scenarios before implementation starts.",
+    "Map the phase acceptance criteria to manual skill evaluation cases in evaluations/cases/.",
+    "Review a planned skill workflow and write observable positive, negative, and behavioral eval cases for it."
+  ],
+  "negative_triggers": [
+    "The user asks to implement an already planned change and run its existing eval cases.",
+    "The user asks for informal brainstorming and has not asked to define a plan or eval cases."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated copy of the target project, use the supplied finished phase plan and its acceptance criteria to define manual eval scenarios for the planned skills and runnable unit tests for its small parsing function. Follow existing evaluation and test conventions. The function has success, boundary, invalid-input, and error paths. One acceptance criterion is ambiguous about what output file should be created; do not invent an answer. Do not implement production behavior, run the evals or tests, or claim they passed.",
+    "pass_criteria": [
+      "Reads the phase plan, target project instructions, and existing manual evaluation examples before drafting cases.",
+      "Creates a case for each in-scope skill with realistic positive triggers, negative triggers owned by neighboring skills where applicable, and a behavioral evaluation.",
+      "Maps behavioral pass criteria to agreed acceptance criteria using outcomes a reviewer can observe in the response or generated artifacts.",
+      "Writes runnable unit tests for the planned code, covering applicable functional requirements and meaningful boundary, invalid-input, and failure cases; does not invent an unsupported coverage percentage.",
+      "Identifies the ambiguous output filename as an open question and does not invent or silently assume it.",
+      "Updates the evaluation index so reviewers can find the new cases.",
+      "Does not implement skill content or report the unrun eval cases as passed."
+    ]
+  }
+}
