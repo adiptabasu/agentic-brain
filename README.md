@@ -29,7 +29,7 @@ Copy this prompt into your AI coding agent and replace `<AI HOST>` with the exac
 
 ## Skills
 
-Canonical skill sources live in [`skills/`](skills/README.md). The [`initialize` skill](skills/initialize/SKILL.md) checks or prepares host-specific discovery folders using documented adapters. Current adapters support Codex, Claude Code, Abacus AI Agent, and Cursor. The [`write-document` skill](skills/write-document/SKILL.md) drafts or revises detailed software and operational documents and composes commit messages from reviewed changes, with relevant persona viewpoints when useful. Use canonical sources as the only editable copy and regenerate host copies when they change.
+Canonical skill sources live in [`skills/`](skills/README.md). The [`initialize` skill](skills/initialize/SKILL.md) checks or prepares host-specific discovery folders using documented adapters. Current adapters support Codex, Claude Code, Abacus AI Agent, and Cursor. The [`write-document` skill](skills/write-document/SKILL.md) drafts or revises local software and operational documents and composes commit messages from reviewed changes, with relevant persona viewpoints when useful. The [`cheapaioutput` skill](skills/cheapaioutput/SKILL.md) shapes concise chat replies only. Use `write-document` or the appropriate implementation skill for local file content. Use canonical sources as the only editable copy and regenerate host copies when they change.
 
 ## Personas
 

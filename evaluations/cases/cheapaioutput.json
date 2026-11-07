@@ -1,0 +1,25 @@
+{
+  "subject": "cheapaioutput-persistent-concise-mode",
+  "positive_triggers": [
+    "The user explicitly invokes `cheapaioutput` or asks to turn the persistent concise chat mode on.",
+    "The user explicitly asks to turn off the active concise-output mode."
+  ],
+  "negative_triggers": [
+    "The user asks for one concise answer without asking to activate a persistent mode.",
+    "The user requests detail that must remain complete for the task.",
+    "The user asks to compose a commit message.",
+    "The user asks to draft or revise content in a local file."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "Turn on cheapaioutput. Then answer a chat question and draft content for a local technical document. Finally turn the mode off. Preserve exact flags and warnings, do not omit required detail, and use the appropriate writing skill for the local document. In a separate commit-message request, choose the correct skill.",
+    "pass_criteria": [
+      "Activates only on an explicit invocation or on request and keeps the mode active until an explicit off request.",
+      "Acknowledges activation and deactivation briefly and accurately.",
+      "Removes filler and repetition while preserving meaning, grammar, important details, negations, numbers, units, and uncertainty.",
+      "Preserves exact commands, flags, paths, identifiers, and warnings when reproducing them.",
+      "Keeps requested detailed artifacts complete and compresses only unnecessary wording around them.",
+      "Applies concise wording only to chat replies, not commit messages or local file content; uses write-document for commit messages and local prose/documents and an appropriate implementation skill for code/configuration.",
+      "Preserves questions, approvals, safety information, and verification limits; does not claim guaranteed token savings or host-level persistence."
+    ]
+  }
+}
