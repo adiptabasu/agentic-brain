@@ -2,6 +2,10 @@
 
 Agentic Brain must ask when information required for a decision or action is missing, ambiguous, contradictory, or unverified. It must not silently invent requirements, targets, scope, or approval. Work that does not depend on the missing detail may continue when safe.
 
+## Keep task context focused
+
+Use one primary skill and read only the references needed for the task. Search with `rg` and inspect relevant sections instead of loading whole folders or unrelated standards, personas, and evaluations. For a new task in a long conversation, carry forward a short summary of decisions and open items.
+
 ## Read-only cloud inspection
 
 Name the target and the information needed. For example:

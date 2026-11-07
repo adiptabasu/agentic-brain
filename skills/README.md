@@ -2,6 +2,8 @@
 
 This directory is the single editable source for Agentic Brain skills. Each skill lives in `skills/<name>/` and requires a `SKILL.md` with `name` and `description` front matter. Add optional `scripts/`, `references/`, `assets/`, or `agents/` resources only when the skill needs them.
 
+Load only the skill selected for the task and the references it needs; this catalogue is not a request to read every skill.
+
 ## Current skills
 
 - [initialize](initialize/SKILL.md) — check or prepare a selected agent host's project-level skill discovery folder.
