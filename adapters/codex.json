@@ -1,0 +1,7 @@
+{
+  "host": "codex",
+  "product": "Codex",
+  "discovery_directory": ".agents/skills",
+  "documentation_url": "https://learn.chatgpt.com/docs/build-skills",
+  "invocation": "Use /skills or type $ to select a skill. Codex may also select a skill from its description."
+}

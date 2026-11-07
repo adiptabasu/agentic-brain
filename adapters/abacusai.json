@@ -1,0 +1,7 @@
+{
+  "host": "abacusai",
+  "product": "Abacus AI Agent",
+  "discovery_directory": ".abacusai/skills",
+  "documentation_url": "https://api.abacus.ai/help/abacusai-desktop/skills",
+  "invocation": "Use /<skill-name> or /skills list; the agent can also select skills from their descriptions."
+}

@@ -1,0 +1,7 @@
+{
+  "host": "claude-code",
+  "product": "Claude Code",
+  "discovery_directory": ".claude/skills",
+  "documentation_url": "https://code.claude.com/docs/en/skills",
+  "invocation": "Use /<skill-name>, such as /initialize, or let Claude Code select the skill from its description."
+}

@@ -1,0 +1,24 @@
+{
+  "subject": "initialize-agent-skills",
+  "positive_triggers": [
+    "The user asks to initialize canonical project skills for Codex, Claude Code, Abacus AI Agent, or Cursor.",
+    "The user asks to initialize for a host outside the current adapter list or to check or troubleshoot host skill discovery."
+  ],
+  "negative_triggers": [
+    "The user asks to write or revise a canonical skill rather than prepare it for discovery."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated repository copy, initialize for each currently supported host: Codex, Claude Code, Abacus AI Agent, and Cursor. Confirm each uses only its configured project directory. Then initialize for a host with no adapter: research its official documentation, add support only if the project-level format is verified, and initialize only that host. Also consider a product whose official documentation does not clearly establish its skill format. Do not access global settings or overwrite conflicting files.",
+    "pass_criteria": [
+      "Uses the canonical `skills/<name>/` tree and maps Codex, Claude Code, Abacus AI Agent, and Cursor to their verified project directories.",
+      "Reports missing, differing, and extra target entries before writes; preserves extras and does not overwrite differing files by default.",
+      "Distinguishes Claude Code's project directory from Claude.ai's account-level skill upload flow.",
+      "Creates only missing project-local copies for the selected host when initialization is directly requested.",
+      "Does not initialize unrelated hosts or change global configuration, install extensions, commit, or push.",
+      "For a host outside the four current adapters, researches that exact product's current official documentation and verifies project-level support, discovery path, manifest schema, supporting-file layout, and invocation before adding support.",
+      "If the unsupported host requires a different manifest or layout, updates the sync helper to generate the documented format from canonical sources and documents the mapping; if official docs are unclear, explains the gap and asks before writing host files.",
+      "Adds support only for the requested host and updates the adapter catalogue, how-to, evaluation, and relevant indexes.",
+      "Rechecks generated copies and distinguishes filesystem verification from observed host UI discovery."
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "host": "cursor",
+  "product": "Cursor",
+  "discovery_directory": ".cursor/skills",
+  "documentation_url": "https://cursor.com/docs/skills",
+  "invocation": "Use /<skill-name> or @ to select a skill, or let Agent select it from its description."
+}
