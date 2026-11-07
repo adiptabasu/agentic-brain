@@ -20,4 +20,6 @@ To create a reusable project structure from a working reference project, see the
 
 To collect and validate the exact destination folder before scaffolding, see the [project-destination skill](../skills/project-destination/SKILL.md).
 
+To document an existing project for future sessions, see the [read-initialize-project skill](../skills/read-initialize-project/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).
