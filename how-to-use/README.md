@@ -18,4 +18,6 @@ To implement a reviewed plan and iterate until its evals and unit tests pass, se
 
 To create a reusable project structure from a working reference project, see the [create-scaffolding skill](../skills/create-scaffolding/SKILL.md).
 
+To collect and validate the exact destination folder before scaffolding, see the [project-destination skill](../skills/project-destination/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).
