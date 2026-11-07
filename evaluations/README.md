@@ -5,4 +5,5 @@ These cases are prompts and pass criteria for reviewers. They are not automated 
 ## Current coverage
 
 - [Main operating rules](cases/main-operating-rules.json)
+- [Persona selection and boundaries](cases/personas.json)
 - [Trust boundaries, local approvals, and verification](cases/trust-and-verification.json)

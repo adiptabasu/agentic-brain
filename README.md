@@ -4,6 +4,10 @@ A clean rebuild of Agentic Brain. Product scope, architecture, and project workf
 
 The previous project version is preserved separately for reference.
 
+## Personas
+
+Personas provide focused viewpoints for software development work; they do not grant permissions or replace repeatable skills. The initial profiles cover requirements analysis, software architecture, security architecture, implementation, independent review and test strategy, technical writing and knowledge curation, SRE, and DevOps. See the [persona catalogue](personas/README.md).
+
 ## Main operating rules
 
 - Ask focused questions when required information is missing or unclear; do not silently assume facts, requirements, scope, targets, or approval.
