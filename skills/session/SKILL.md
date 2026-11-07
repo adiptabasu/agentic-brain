@@ -14,6 +14,8 @@ Use for feature development, debugging, or other software work likely to span ch
 3. Resume an existing closed scratch folder in place. If it was terminated, create `sessions/work/YYYY-MM-DD-<workstream>/SESSION.md` from `sessions/SESSION-TEMPLATE.md`; add a numeric suffix if the ID exists. Seed it from the handoff and update the index.
 4. Keep temporary plans, notes, logs, and generated files in that ignored folder. Save real project changes at their normal paths.
 
+Use the [plan skill](../plan/SKILL.md) for session-local planning. `plan finish` consolidates the plan in the session's `PLAN.md`; a handoff may carry a concise summary and next action, but the plan itself remains untracked and is deleted with scratch at termination.
+
 ## Close or complete
 
 - **Pause:** Use [write-document](../write-document/SKILL.md) to update `sessions/handoffs/<workstream>.md` in place with status, decisions, progress, changed files, checks, blockers, and next actions. Mark the scratch session `closed`; update the index. Preserve both handoff and scratch folder.

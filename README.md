@@ -33,6 +33,8 @@ Canonical skill sources live in [`skills/`](skills/README.md). The [`initialize`
 
 Use the [`session` skill](skills/session/SKILL.md) to manage dated scratch folders and resumable handoffs for multi-day work.
 
+Use the [`plan` skill](skills/plan/SKILL.md) to create and consolidate a plan inside a session. The plan remains in ignored scratch and is deleted when that session is terminated.
+
 ## Personas
 
 Personas provide focused viewpoints for software development work; they do not grant permissions or replace repeatable skills. The initial profiles cover requirements analysis, software architecture, security architecture, implementation, independent review and test strategy, technical writing and knowledge curation, SRE, and DevOps. See the [persona catalogue](personas/README.md).

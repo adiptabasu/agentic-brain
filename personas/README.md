@@ -21,4 +21,6 @@ SRE and DevOps often collaborate but have distinct emphases: SRE centers service
 
 For a repeatable detailed-document workflow, use the [write-document skill](../skills/write-document/SKILL.md) with the Technical Writer and Knowledge Curator persona. Add only relevant subject-matter personas when technical accuracy benefits from their viewpoint.
 
+For actionable software work plans, use the [plan skill](../skills/plan/SKILL.md) with the Software Architect viewpoint by default and relevant specialist personas as needed. Plans remain in session scratch until termination.
+
 For examples, see [Choose and combine personas](../how-to-use/02-personas.md). Profile structure is defined in the [Persona Template](../standards/PERSONA-TEMPLATE.md).

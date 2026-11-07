@@ -13,6 +13,7 @@
       "Creates dated scratch folders only under the ignored sessions/work/ path and keeps temporary artifacts there.",
       "Maintains one rolling tracked handoff per workstream and reads only the relevant handoff when resuming.",
       "Resumes an existing closed scratch folder in place, or seeds a fresh dated folder from the handoff after prior scratch termination.",
+      "Keeps working and finished plans in ignored scratch; termination deletes the plan with the session folder while any pause handoff retains only a concise summary if useful.",
       "On pause, records decisions, progress, changed files, checks, blockers, and next actions; paused cleanup preserves the handoff.",
       "On completion, updates only relevant source-of-truth project files and does not alter README merely to log the session.",
       "Refuses to terminate active work and asks explicit yes/no approval naming exact deletion targets before cleanup.",

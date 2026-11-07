@@ -10,4 +10,6 @@ To reduce chat response length while preserving important details, see [Use chea
 
 To manage multi-day work across chat sessions, see [Work sessions](05-work-sessions.md).
 
+To create persona-informed plans that stay in session scratch until termination, see [Create and finish a plan](06-create-and-finish-a-plan.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).

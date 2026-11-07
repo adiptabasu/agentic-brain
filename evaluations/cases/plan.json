@@ -1,0 +1,24 @@
+{
+  "subject": "session-plan-and-finish",
+  "positive_triggers": [
+    "The user asks for an actionable plan for multi-step software or operational work.",
+    "The user invokes `plan finish` to consolidate a session plan."
+  ],
+  "negative_triggers": [
+    "The user asks to implement a clear, small change directly without requesting a plan.",
+    "The user asks for brainstorming or an informal checklist that does not need a session plan."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated repository copy, plan a multi-step software feature in an active session, then invoke `plan finish`. Include unclear requirements, architecture choices, security considerations, and verification needs. Do not implement the plan.",
+    "pass_criteria": [
+      "Creates or updates a single working PLAN.md inside the active session folder, starting or resuming a session through the session workflow when needed.",
+      "Applies the Software Architect viewpoint by default for software design and implementation plans and adds only relevant specialist personas.",
+      "Distinguishes confirmed requirements, proposals, decisions, and open questions; asks about material unknowns rather than inventing requirements, estimates, owners, or dates.",
+      "Produces actionable ordered work with dependencies, risks, and acceptance or verification criteria.",
+      "On `plan finish`, consolidates relevant planning material into the single PLAN.md in the active session, marks it ready, and records the next action in session state.",
+      "Keeps the plan only in ignored session scratch, untracked, until session termination deletes the scratch folder.",
+      "Does not create or update a tracked project plan, execute, commit, deploy, or delete scratch artifacts as part of plan finish.",
+      "Does not report this manual evaluation as passed unless it was run and reviewed."
+    ]
+  }
+}

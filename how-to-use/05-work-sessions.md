@@ -8,6 +8,8 @@ Use the [`session` skill](../skills/session/SKILL.md) for feature development, d
 
 Scratch lives under `sessions/work/<session-id>/`. The tracked handoff lives at `sessions/handoffs/<workstream>.md`; the index points to both while scratch exists.
 
+Use the [plan skill](../skills/plan/SKILL.md) to keep a single `PLAN.md` in the session. `plan finish` consolidates it in place; it remains untracked and is deleted when session scratch is terminated. A paused handoff may carry a short summary and next step.
+
 ## Pause
 
 > Close this session as paused. Update its rolling handoff and the session index with decisions, progress, changed files, checks, blockers, and next action. Keep the scratch folder.

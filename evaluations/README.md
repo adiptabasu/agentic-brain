@@ -9,5 +9,6 @@ These cases are prompts and pass criteria for reviewers. They are not automated 
 - [Write detailed software documents](cases/write-document.json)
 - [Cheap AI output mode](cases/cheapaioutput.json)
 - [Multi-chat work sessions](cases/session.json)
+- [Session planning and plan finish](cases/plan.json)
 - [Persona selection and boundaries](cases/personas.json)
 - [Trust boundaries, local approvals, and verification](cases/trust-and-verification.json)

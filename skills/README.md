@@ -10,6 +10,7 @@ Load only the skill selected for the task and the references it needs; this cata
 - [write-document](write-document/SKILL.md) — draft or revise detailed software and operational documents, and compose clear commit messages from reviewed changes.
 - [cheapaioutput](cheapaioutput/SKILL.md) — toggle concise wording for chat replies; use `write-document` for commit messages and local prose.
 - [session](session/SKILL.md) — start, pause, resume, complete, and safely terminate multi-chat work sessions.
+- [plan](plan/SKILL.md) — create persona-informed session plans and consolidate them into one session-local `PLAN.md` with `plan finish`.
 
 Host-specific copies are generated in the directories listed under `adapters/` (currently Codex, Claude Code, Abacus AI Agent, and Cursor). The initialize workflow can add another host after verifying its current official project-skill documentation. Do not edit generated copies directly. After editing a canonical skill, synchronize it with `scripts/sync_skills.py` and recheck the result.
 
