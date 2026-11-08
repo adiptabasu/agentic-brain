@@ -26,4 +26,6 @@ To start or resume a local support issue with a persistent case record, see the 
 
 To draft a client response with internal reasoning clearly separated, see the [client-response skill](../skills/client-response/SKILL.md).
 
+To inspect logs generally or around a specific time, see the [analyze-logs skill](../skills/analyze-logs/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).

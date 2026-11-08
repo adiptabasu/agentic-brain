@@ -18,6 +18,7 @@ Load only the skill selected for the task and the references it needs; this cata
 - [read-initialize-project](read-initialize-project/SKILL.md) — create or refresh a root-level project context guide while preserving manual notes.
 - [start-support-issue](start-support-issue/SKILL.md) — start or resume a local support case with a durable, redacted issue record.
 - [client-response](client-response/SKILL.md) — draft a copy-ready client message followed by a separate internal logic section.
+- [analyze-logs](analyze-logs/SKILL.md) — inspect logs in general or specific-time mode with timezone handling and evidence references.
 
 Host-specific copies are generated in the directories listed under `adapters/` (currently Codex, Claude Code, Abacus AI Agent, and Cursor). The initialize workflow can add another host after verifying its current official project-skill documentation. Do not edit generated copies directly. After editing a canonical skill, synchronize it with `scripts/sync_skills.py` and recheck the result.
 
