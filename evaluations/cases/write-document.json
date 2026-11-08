@@ -19,7 +19,9 @@
       "Uses the Technical Writer and Knowledge Curator persona for editorial perspective and adds only a relevant subject persona, such as SRE, when useful.",
       "Treats the persona as a viewpoint and the skill as a repeatable workflow; neither implies approval or external publication.",
       "Reports verification accurately and does not claim testing or publication that did not occur.",
-      "For the commit-message request, uses only `write-document`, bases the subject and explanatory body on the reviewed staged diff, and matches the repository's message convention.",
+      "For the commit-message request, uses only `write-document` and bases the subject and body on the reviewed staged diff.",
+      "Uses Conventional Commit subject syntax with an accurate type tag; documentation-only changes use `docs`, not `doc`.",
+      "Includes a non-empty detailed body that explains why the change was made, what changed, and verification actually run; material checks not run are stated without unsupported pass claims.",
       "Provides the full proposed commit message for explicit approval and does not treat writing it as authorization to commit or push."
     ]
   }

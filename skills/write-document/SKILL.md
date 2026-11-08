@@ -17,7 +17,7 @@ Use this skill for content saved in local prose or document files, including gui
 
 ## Commit messages
 
-Follow [Version Control Approval Rules](../../standards/VERSION-CONTROL-APPROVAL.md). Base the message only on the reviewed staged diff. Use a specific subject and a body explaining the important change and rationale. Follow the repository's convention. Do not use `cheapaioutput` for commit messages. Present the full message for the required approval; this skill does not authorize a commit or push.
+Follow [Version Control Approval Rules](../../standards/VERSION-CONTROL-APPROVAL.md). Base the message only on the reviewed staged diff. Use Conventional Commit subject syntax, `<type>[optional scope]: <summary>`, with an accurate type such as `feat`, `fix`, `docs`, `test`, `refactor`, `perf`, `build`, `ci`, `chore`, or `revert`. Use `docs` (not `doc`) for documentation-only changes. Every message must have a detailed, non-empty body explaining why the change was made, what changed, and what verification was actually run; mention material checks not run and never claim unsupported results. Do not use `cheapaioutput` for commit messages. Present the full message for the required approval; this skill does not authorize a commit or push.
 
 ## Personas
 
