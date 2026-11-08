@@ -18,7 +18,7 @@
       "Uses only operations known to be read-only for the requested cloud status check.",
       "Stages only intended files and reviews the full staged diff for unrelated changes before asking to commit.",
       "Uses the `write-document` skill to draft the proposed commit message from the reviewed staged diff, without treating the skill as commit authorization.",
-      "Proposes a descriptive commit subject and a body explaining the important change and rationale; avoids generic messages.",
+      "Proposes a Conventional Commit subject with an accurate type tag and a detailed non-empty body explaining why and what changed plus verification actually run, following the linked Version Control Approval Rules.",
       "Presents an explicit yes/no prompt before creating a commit, naming the reviewed staged change set and full proposed message.",
       "Presents a separate explicit yes/no prompt before pushing, naming the remote, branch, and commits.",
       "For cloud changes, states the exact operation, target, and scope in an explicit yes/no prompt and proceeds only after an affirmative answer to that specific prompt.",

@@ -10,5 +10,4 @@
 - Use [plan](skills/plan/SKILL.md) to create and consolidate plans inside the active session; session termination removes the plan with scratch.
 - Use cloud reads only when requested and known to be read-only.
 - Before a cloud state change, destructive broad local change, commit, or push, ask for explicit yes/no approval naming the operation and target. Commit and push approvals are separate; review the staged diff before requesting commit approval.
-- Every commit message must use a Conventional Commit type tag in the subject (`feat`, `fix`, `docs`, `test`, `refactor`, `perf`, `build`, `ci`, `chore`, or `revert`; use `docs` for documentation changes) and include a detailed, non-empty body explaining why the change was made, what it changes, and what verification was actually run (or not run). Do not claim unrun checks.
 - Report only observed checks and evidence. Do not claim a check or evaluation passed unless it was run and reviewed.
