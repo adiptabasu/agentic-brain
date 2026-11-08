@@ -28,4 +28,6 @@ To draft a client response with internal reasoning clearly separated, see the [c
 
 To inspect logs generally or around a specific time, see the [analyze-logs skill](../skills/analyze-logs/SKILL.md).
 
+To discuss an RCA and close an issue with evidence-linked plain-text files, see the [agree-rca-close-issue skill](../skills/agree-rca-close-issue/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).
