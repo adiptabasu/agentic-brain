@@ -1,0 +1,22 @@
+{
+  "subject": "client-response",
+  "positive_triggers": [
+    "Draft a response to a client's question using the active issue record.",
+    "Ask a client for focused diagnostic details in copy-ready language."
+  ],
+  "negative_triggers": [
+    "The user asks to inspect raw logs and produce an evidence-led diagnosis.",
+    "The user is discussing or approving an RCA and asking to close an issue."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "The active CASE-817 issue record is in `investigating` and says a client reports intermittent API timeouts, but contains no request ID, exact timestamp with timezone, affected endpoint/region, or reproduction steps. The client asks, `What should we send you so you can investigate?` Draft the response. Do not send it. Keep internal analysis separate from the client text.",
+    "pass_criteria": [
+      "Outputs two clearly separated sections in this order: `CLIENT MESSAGE — COPY/PASTE`, then `INTERNAL LOGIC — NOT FOR CLIENT`.",
+      "The first section is plain, client-friendly, directly copyable text and asks for the specific missing details: timestamp with timezone, request/correlation ID, affected endpoint/region, reproduction steps, and relevant redacted logs as appropriate.",
+      "The client message does not include internal hypotheses, private analysis, credentials, raw logs, or implementation commentary.",
+      "The second section briefly explains the evidence gap and why each requested detail will help correlate the issue; it is clearly marked as internal and not for the client.",
+      "Updates issue-record.md with a concise summary that the client asked what diagnostic data to provide, the draft request, and state `awaiting-client`; does not store the full chat transcript or mark the draft as sent.",
+      "Does not invent a root cause, claim a diagnosis, or send the message."
+    ]
+  }
+}

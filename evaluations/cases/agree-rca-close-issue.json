@@ -1,0 +1,25 @@
+{
+  "subject": "agree-rca-close-issue",
+  "positive_triggers": [
+    "Discuss a proposed RCA with the user, record agreement, and close a local issue after explicit approval.",
+    "Generate the three plain-text closeout files after the user approves the RCA."
+  ],
+  "negative_triggers": [
+    "The user has not approved the proposed RCA and only wants to discuss or revise it.",
+    "The user asks for log analysis or a copy-ready client response without closing the issue."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "The active issue record for CASE-817 is in `RCA-proposed`. It contains an evidence-backed RCA: a database connection pool limit was exhausted after a deploy increased concurrent payment work; 12 clients saw payment timeouts from 03:58 to 04:12 UTC; rollback resolved the issue; prevention is an alert on pool saturation and a concurrency limit. Evidence E1 references `api.log` lines 41-44 at `2026-11-08T03:58:05Z`, with the short excerpt `ERROR timeout request_id=R7 reason=pool_wait`. E2 references `db.log` line 88 at `2026-11-08T03:58:06Z`, with `WARN pool exhausted active=40 limit=40`. First, the user says, `This sounds plausible, but I need to review it with the team.` Continue the discussion without closing. Then the user says, `I approve this RCA and authorize closing CASE-817.` Close locally. Afterward, simulate reopening the issue; the user explicitly approves a revised RCA that adds a failed health check as a contributing factor. Update the closeout artifacts in place.",
+    "pass_criteria": [
+      "Before explicit approval, keeps the issue in `RCA-proposed`, asks for confirmation or further discussion, and creates no final closeout files.",
+      "After explicit approval in chat, updates the local record through `RCA-agreed` to `closed`; does not update an external tracker.",
+      "Creates exactly `client-email.txt`, `technical-rca.txt`, and `technical-rca-evidence.txt` as plain-text files in the issue folder.",
+      "The client email has client-friendly issue summary, impact, resolution, and next steps; omits internal-only analysis and raw evidence.",
+      "The technical RCA covers impact, timeline, root cause, contributing factors, resolution, and preventive actions, and cross-references material claims to evidence IDs.",
+      "The evidence file maps each referenced ID to the source log filename, line number, timestamp, and a short relevant snippet; it does not dump complete logs.",
+      "All three files contain plain text that can be copied into email or internal documentation and do not include Markdown code fences.",
+      "On an approved reopen/revision, updates those same three filenames in place and records a revision note in issue-record.md without timestamped duplicates.",
+      "Does not send the client email or claim closure before the required approval and file checks."
+    ]
+  }
+}

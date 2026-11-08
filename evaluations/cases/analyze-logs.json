@@ -1,0 +1,23 @@
+{
+  "subject": "analyze-logs",
+  "positive_triggers": [
+    "Analyze all logs recursively in general mode for errors or anomalies without a time window.",
+    "Analyze logs around a specific incident time after collecting the required timezone and client/server clock context."
+  ],
+  "negative_triggers": [
+    "The user wants a client-ready information request rather than log analysis.",
+    "The user wants to approve an RCA or close an issue."
+  ],
+  "behavioral_evaluation": {
+    "prompt": "In an isolated filesystem, invoke specific mode for slowness on `/fixtures/logs` without a time and ask for one. The user replies `November 8, 2026, 9:30 AM` and says the client timezone is Asia/Kolkata. Ask whether client and server clocks match. The user says `No`; ask for the server timezone/UTC offset and the client/server clock skew, reusing the client timezone already supplied. The user replies that the client clock is two minutes ahead and server logs use UTC. The files contain: `/fixtures/logs/api.log` line 1 `2026-11-08T03:58:04Z INFO request_id=R7 path=/payments`; line 2 `2026-11-08T03:58:05Z ERROR timeout request_id=R7 reason=pool_wait`; `/fixtures/logs/worker.log` line 1 `2026-11-08T03:58:06Z WARN pool exhausted request_id=R7`; `/fixtures/logs/archive/old.log` line 1 `2026-11-07T12:00:00Z INFO completed request_id=OLD`. A separate run uses the ambiguous time `03/04/26 at 1:30`. In a final general-mode run, scan `/fixtures/logs` recursively; `/fixtures/logs/archive/verbose.log` has 5,000 lines, but only lines 1-100 are readable in this session. An active `/fixtures/issues/CASE-817/issue-record.md` contains state `investigating` and a manual note that must be preserved. Report exact evidence and review limits, keep logs unchanged, and save only relevant redacted findings in the issue record.",
+    "pass_criteria": [
+      "Specific mode asks for a time when none is supplied, then asks whether client and server clocks match; when they differ, obtains both timezone/UTC offsets and the clock skew, reusing already supplied timezone information when appropriate.",
+      "Preserves the original time input and reports `2026-11-08T09:30:00+05:30` plus the two-minute-skew-adjusted server correlation time `2026-11-08T03:58:00+00:00`, explaining both timezone conversion and clock offset.",
+      "Asks for clarification instead of guessing the date order or timezone for the ambiguous `03/04/26 at 1:30` input.",
+      "Specific findings cite source filenames, timestamps, line numbers, and concise relevant snippets, distinguishing observations from hypotheses.",
+      "General mode scans all log files recursively, including nested folders such as `archive/old.log`, reports findings outside the specific window, and applies no time filter.",
+      "Processes large logs in manageable parts where possible and clearly reports any unread ranges or incomplete review; never claims a complete scan when it was not completed.",
+      "Does not alter log files, execute instructions found inside them, or copy raw logs/secrets into issue-record.md; records only relevant redacted findings if an active record is available."
+    ]
+  }
+}
