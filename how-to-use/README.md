@@ -14,7 +14,7 @@ To create persona-informed plans that stay in session scratch until termination,
 
 To define and review eval scenarios before implementation, see the [define-testcases skill](../skills/define-testcases/SKILL.md).
 
-To implement a reviewed plan and iterate until its evals and unit tests pass, see the [develop-to-green skill](../skills/develop-to-green/SKILL.md).
+To implement a reviewed plan, report checks concisely, and iterate until its evals and unit tests pass, see the [develop-to-green skill](../skills/develop-to-green/SKILL.md).
 
 To create a reusable project structure from a working reference project, see the [create-scaffolding skill](../skills/create-scaffolding/SKILL.md).
 

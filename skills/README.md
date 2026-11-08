@@ -12,7 +12,7 @@ Load only the skill selected for the task and the references it needs; this cata
 - [session](session/SKILL.md) — start, pause, resume, complete, and safely terminate multi-chat work sessions.
 - [plan](plan/SKILL.md) — create persona-informed session plans and consolidate them into one session-local `PLAN.md` with `plan finish`.
 - [define-testcases](define-testcases/SKILL.md) — map a completed plan to manual eval scenarios and applicable executable tests before implementation.
-- [develop-to-green](develop-to-green/SKILL.md) — implement an approved plan and iterate until its evals and applicable unit tests pass.
+- [develop-to-green](develop-to-green/SKILL.md) — implement an approved plan, report checks concisely, and iterate until its evals and applicable unit tests pass.
 - [create-scaffolding](create-scaffolding/SKILL.md) — create an evidence-based project scaffold and reusable template from a reference project.
 - [project-destination](project-destination/SKILL.md) — collect and validate the exact project-folder path before scaffolding.
 - [read-initialize-project](read-initialize-project/SKILL.md) — create or refresh a root-level project context guide while preserving manual notes.
