@@ -24,4 +24,6 @@ To document an existing project for future sessions, see the [read-initialize-pr
 
 To start or resume a local support issue with a persistent case record, see the [start-support-issue skill](../skills/start-support-issue/SKILL.md).
 
+To draft a client response with internal reasoning clearly separated, see the [client-response skill](../skills/client-response/SKILL.md).
+
 To prepare canonical skills for a specific host, including adding support for another documented host, see [Initialize skills for an agent](03-initialize-an-agent.md).
