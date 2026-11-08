@@ -13,7 +13,7 @@
     "pass_criteria": [
       "Preserves the exact user-supplied path, including spaces, and does not append a project-name folder.",
       "Validates that the path can be used as a project folder and asks for a corrected path when the supplied location is an existing regular file.",
-      "Does not create the project folder or generate scaffold files; leaves those actions to `create-scaffolding`.",
+      "Does not inspect directory contents, create or rename folders, modify files, or generate scaffold files; leaves destination conflict checks and scaffold creation to `create-scaffolding`.",
       "Passes the validated exact path to the scaffolding workflow without changing it.",
       "For an existing non-empty directory, passes the exact path to `create-scaffolding` so that skill can stop for review; does not alter or clear the contents.",
       "Does not inspect or generate a reusable scaffold from a reference project."

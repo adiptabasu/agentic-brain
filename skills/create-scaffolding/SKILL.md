@@ -34,15 +34,4 @@ If either path is missing or ambiguous, ask for it. Do not guess. `project-desti
    - what was preserved and what was adapted, with reasons tied to the reference and new project;
    - excluded files or folders and why they were excluded;
    - the shared template location and any assumptions or unresolved questions.
-8. **Verify and report.** Check that the destination contains the expected structure and root-level blueprint, the shared template contains the selected reusable files, and excluded content was not copied. Report the two locations, the key preserve/adapt decisions, exclusions, and any incomplete checks. Do not claim a file was created unless it exists.
-
-## Stop conditions
-
-- A non-empty destination or a same-name shared template exists: stop before overwriting and ask for review.
-- The shared templates root is missing, unusable, or ambiguous: ask for it before writing.
-- A required path or material preservation/adaptation decision is unclear: ask rather than inventing behavior.
-- The operation would copy sensitive data, follow a path outside the reference root, or overwrite unrelated files: stop and explain the conflict.
-
-## Completion
-
-This skill is complete when the exact destination scaffold, its root `scaffold-blueprint.md`, and the reusable shared template are present and checked, or when it has stopped safely with the specific blocker reported. It does not create an application implementation or commit or push changes.
+8. **Verify and report.** Check that the destination contains the expected structure and root-level blueprint, the shared template contains the selected reusable files, and excluded content was not copied. Report the two locations, the key preserve/adapt decisions, exclusions, and any incomplete checks. Do not claim a file was created unless it exists. This workflow does not implement application logic or commit or push changes.

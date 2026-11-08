@@ -16,7 +16,7 @@
       "Stores the reusable directory/file template under the configured shared templates root in a lowercase kebab-case folder named for the source project.",
       "If `templates_root` is not configured, asks for the shared root and stores the supplied value under `templates_root` in `~/.config/agentic-brain/config.json`; reuses an existing empty destination without nesting another project folder.",
       "Excludes `.env`, customer data, dependency folders, and generated output, and lists each exclusion with a reason in the blueprint.",
-      "When a same-name template exists, compares and stops for review without overwriting it; when the destination already contains user files, stops for review without changing them.",
+      "When a same-name template exists or the destination contains user files, stops before writing, identifies the blocker, and preserves existing contents.",
       "Does not claim the destination or shared template was written unless the isolated filesystem shows the expected result."
     ]
   }

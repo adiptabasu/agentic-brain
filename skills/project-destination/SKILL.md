@@ -15,16 +15,5 @@ Use this one-shot skill to obtain a usable path for the project folder and hand 
 ## Workflow
 
 1. **Get the path.** If the user has not supplied a destination, ask for the exact project-folder path. Do not choose a location or append a project-name directory on the user's behalf.
-2. **Validate read-only.** Preserve the supplied path, including spaces and its original spelling. Check that it is a usable path for a folder. An existing regular file is not a usable project folder; ask for a corrected path. An existing directory, including a non-empty one, is a candidate destination; do not inspect or alter its contents here. If the path cannot be interpreted or validated in the current context, ask a focused question instead of guessing.
-3. **Hand off the exact path.** Pass the unchanged path as the project folder root to `create-scaffolding` when that workflow is requested and available. The scaffolding skill decides whether an existing directory is empty or must be left unchanged for review. If scaffolding was not requested or is unavailable, return the validated path and wait for the next step.
-
-## Boundaries
-
-- Do not create, rename, or modify folders or files.
-- Do not append a second folder name to the supplied path.
-- Do not inspect a reference project, generate a blueprint, or copy a template; those actions belong to `create-scaffolding`.
-- Do not reject a non-empty directory solely for its contents; pass it to `create-scaffolding`, which owns that conflict check.
-
-## Completion
-
-Complete when the exact path has been validated and handed to `create-scaffolding`, or returned to the user if no handoff is requested. Report a path validation blocker clearly and request the missing or corrected path.
+2. **Validate read-only.** Preserve the supplied path, including spaces and its original spelling. Check that it is a usable path for a folder. An existing regular file is not a usable project folder; ask for a corrected path. An existing directory, including a non-empty one, is a candidate destination; do not inspect its contents. Do not create, rename, or modify folders or files, inspect the reference project, generate a blueprint, or copy a template in this skill. If the path cannot be interpreted or validated in the current context, ask a focused question instead of guessing.
+3. **Hand off the exact path.** Pass the unchanged path as the project folder root to `create-scaffolding` when that workflow is requested and available. That skill decides whether the directory can be used or must be left unchanged for review. If scaffolding was not requested or is unavailable, return the validated path and wait for the next step. Report a validation blocker and ask for the missing or corrected path.
