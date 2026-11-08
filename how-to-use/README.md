@@ -16,7 +16,7 @@ To define and review eval scenarios before implementation, see the [define-testc
 
 To implement a reviewed plan, report checks concisely, and iterate until its evals and unit tests pass, see the [develop-to-green skill](../skills/develop-to-green/SKILL.md).
 
-To adapt a working reference into a reusable scaffold and record excluded content, see the [create-scaffolding skill](../skills/create-scaffolding/SKILL.md).
+To adapt a working reference into a reusable scaffold and summarize its structure, decisions, and exclusions in a concise blueprint, see the [create-scaffolding skill](../skills/create-scaffolding/SKILL.md).
 
 To validate and hand off an exact destination folder without changing it, see the [project-destination skill](../skills/project-destination/SKILL.md).
 

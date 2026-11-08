@@ -13,7 +13,7 @@ Load only the skill selected for the task and the references it needs; this cata
 - [plan](plan/SKILL.md) — create persona-informed session plans and consolidate them into one session-local `PLAN.md` with `plan finish`.
 - [define-testcases](define-testcases/SKILL.md) — map a completed plan to manual eval scenarios and applicable executable tests before implementation.
 - [develop-to-green](develop-to-green/SKILL.md) — implement an approved plan, report checks concisely, and iterate until its evals and applicable unit tests pass.
-- [create-scaffolding](create-scaffolding/SKILL.md) — adapt proven structure into a scaffold and reusable template, with exclusions recorded in a blueprint.
+- [create-scaffolding](create-scaffolding/SKILL.md) — adapt proven structure into a reusable scaffold and document decisions concisely in a blueprint.
 - [project-destination](project-destination/SKILL.md) — read-only validation and handoff of the exact project-folder path.
 - [read-initialize-project](read-initialize-project/SKILL.md) — create or refresh a root-level project context guide while preserving manual notes.
 - [start-support-issue](start-support-issue/SKILL.md) — start or resume a local support case with a durable, redacted issue record.
